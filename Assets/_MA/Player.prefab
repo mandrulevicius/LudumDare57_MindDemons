@@ -58,9 +58,9 @@ MonoBehaviour:
     health: 1
     velocity: {x: 0, y: 0}
     speed: 5
-    speedBoostMultiplier: 1
-    fuelCapacity: 1
-    fuel: 1
+    speedBoostMultiplier: 2
+    fuelCapacity: 100
+    fuel: 100
     energyCapacity: 1
     energy: 1
   rb: {fileID: 0}
@@ -68,7 +68,7 @@ MonoBehaviour:
   movementTargetPosition: {x: 0, y: 0}
   moveDirectionVector: {x: 0, y: 0}
   lookDirectionVector: {x: 0, y: 0}
-  isJumping: 0
+  isSprinting: 0
   isDashing: 0
 --- !u!212 &8163659824005712968
 SpriteRenderer:

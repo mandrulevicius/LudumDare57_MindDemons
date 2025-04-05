@@ -47,8 +47,8 @@ public class Entity : MonoBehaviour
     [ReadOnly] public Vector2 lookDirectionVector;
     
     
-    public bool isJumping;
-    public bool isDashing;
+    [ReadOnly] public bool isSprinting;
+    [ReadOnly] public bool isDashing;
 
     float _speedPerTick;
     
@@ -92,6 +92,10 @@ public class Entity : MonoBehaviour
     void FixedUpdate()
     {
         UpdateEntity();
+        
+        float angle = Mathf.Atan2(lookDirectionVector.y, lookDirectionVector.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, angle - 90f);
+        
         if (movementTarget) movementTargetPosition = movementTarget.transform.position;
         if (movementTargetPosition != Vector2.zero) moveDirectionVector = (movementTargetPosition - (Vector2)transform.position).normalized;
 
@@ -121,7 +125,7 @@ public class Entity : MonoBehaviour
     void CalcSpeed()
     {
         _speedPerTick = stats.speed * Time.fixedDeltaTime;
-        if (!isDashing || stats.fuel <= 0) return;
+        if (!isSprinting || stats.fuel <= 0) return;
         stats.fuel -= Time.fixedDeltaTime;
         _speedPerTick *= stats.speedBoostMultiplier;
     }
