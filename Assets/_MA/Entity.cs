@@ -72,7 +72,14 @@ public class Entity : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         Entity otherEntity = other.gameObject.GetComponent<Entity>();
-        if(otherEntity == null) return;
+        if (otherEntity == null)
+        {
+            if (gameObject.CompareTag("Bullet"))
+            {
+                ApplyDamage(1);
+            }
+            return;
+        }
         float damage = CalcDamage(otherEntity);
 
         Interactions.Add(
