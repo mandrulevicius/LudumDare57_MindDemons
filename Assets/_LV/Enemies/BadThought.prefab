@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: -6916916536464095153}
   - component: {fileID: 2146380414722859313}
   - component: {fileID: 739098344359738782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BadThought
   m_TagString: Untagged
   m_Icon: {fileID: 0}

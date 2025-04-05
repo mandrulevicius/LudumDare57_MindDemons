@@ -95,7 +95,7 @@ public class Entity : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         // gravity here
-        Debug.Log($"{gameObject.name} triggered by collider: {other.gameObject.name}");
+        // Debug.Log($"{gameObject.name} triggered by collider: {other.gameObject.name}");
     }
 
     
