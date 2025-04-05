@@ -38,6 +38,8 @@ public class Entity : MonoBehaviour
     public Stats stats;
     [ReadOnly] public Rigidbody2D rb;
     
+    [SerializeField] GameObject explosionPrefab;
+    
     // public LayerMask targetLayers;
     public GameObject movementTarget;
     [ReadOnly] public Vector2 movementTargetPosition;
@@ -51,6 +53,8 @@ public class Entity : MonoBehaviour
     [ReadOnly] public bool isDashing;
 
     float _speedPerTick;
+    
+    public bool inCombat;
     
     
     // ============================= INIT =============================
@@ -147,13 +151,21 @@ public class Entity : MonoBehaviour
 
     void ApplyDamage(float damage)
     {
-        GetComponent<AudioSource>().Play();
+        var hitSound = GetComponent<AudioSource>();
+        if (hitSound) GetComponent<AudioSource>().Play();
         // apply hit effect - hit effect should have sound on damage, particles, show damage numbers, etc.
         stats.health -= damage;
     }
 
     void Die()
     {
+        if (explosionPrefab)
+        {
+            GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            // should already be instantiated, just disabled. should be handled on explosion itself, not on entity
+            explosion.GetComponent<Explosion>().endSize = stats.volume * 5;
+            explosion.GetComponent<Explosion>().lifetime = stats.volume;
+        }
         Destroy(gameObject, 0f);
     }
 }
