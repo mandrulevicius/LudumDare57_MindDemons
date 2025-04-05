@@ -4,22 +4,14 @@ using System.Collections.Generic;
 public class SimpleRoom : MonoBehaviour
 {
     // =========================== TRIGGERS ===========================
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (!other.gameObject.CompareTag("Player")) return;
+        
+        GameObject[] enemiesInTrigger = FindEnemiesInTrigger();
+        foreach (GameObject enemy in enemiesInTrigger)
         {
-            Debug.Log($"{gameObject.name} triggered by PLAYER");
-
-            // Find all enemies in the trigger area
-            GameObject[] enemiesInTrigger = FindEnemiesInTrigger();
-            Debug.Log($"Found {enemiesInTrigger.Length} enemies in trigger");
-
-            // Do something with the enemies...
-            foreach (GameObject enemy in enemiesInTrigger)
-            {
-                Debug.Log($"Enemy in trigger: {enemy.name}");
-                enemy.GetComponent<Entity>().movementTarget = other.gameObject;
-            }
+            enemy.GetComponent<Entity>().movementTarget = other.gameObject;
         }
     }
 
