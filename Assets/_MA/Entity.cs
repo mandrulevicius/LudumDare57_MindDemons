@@ -100,9 +100,9 @@ public class Entity : MonoBehaviour
         if (movementTargetPosition != Vector2.zero) moveDirectionVector = (movementTargetPosition - (Vector2)transform.position).normalized;
 
         if (moveDirectionVector != Vector2.zero) CalcSpeed();
-        // if (moveDirectionVector != Vector2.zero) transform.position += (Vector3) moveDirectionVector * _speedPerTick;
-        if (moveDirectionVector != Vector2.zero) rb.linearVelocity = moveDirectionVector * _speedPerTick;
-        else rb.linearVelocity = Vector2.zero;
+        if (moveDirectionVector != Vector2.zero) transform.position += (Vector3) moveDirectionVector * _speedPerTick;
+        // if (moveDirectionVector != Vector2.zero) rb.linearVelocity = moveDirectionVector * _speedPerTick;
+        // else rb.linearVelocity = Vector2.zero;
         // if (moveDirectionVector != Vector2.zero) rb.AddForce(moveDirectionVector * _speedPerTick, ForceMode2D.Impulse);
         // if (!isStabilizing) rb.linearDamping = 0;
         // else rb.linearDamping = _speedPerTick;

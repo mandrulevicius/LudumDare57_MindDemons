@@ -688,6 +688,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2365676078368846501, guid: c176c87d40336344ba81734b31de19c6, type: 3}
+      propertyPath: stats.speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365676078368846501, guid: c176c87d40336344ba81734b31de19c6, type: 3}
       propertyPath: stats.fuelCapacity
       value: 100
       objectReference: {fileID: 0}

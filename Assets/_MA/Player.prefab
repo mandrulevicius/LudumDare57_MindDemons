@@ -57,7 +57,7 @@ MonoBehaviour:
     hardness: 1
     health: 1
     velocity: {x: 0, y: 0}
-    speed: 100
+    speed: 5
     speedBoostMultiplier: 2
     fuelCapacity: 100
     fuel: 100
