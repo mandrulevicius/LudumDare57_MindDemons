@@ -144,14 +144,14 @@ MonoBehaviour:
     hardness: 1
     health: 1
     velocity: {x: 0, y: 0}
-    speed: 0
-    speedBoostMultiplier: 0
+    speed: 5
+    speedBoostMultiplier: 1
     fuelCapacity: 0
     fuel: 0
     energyCapacity: 0
     energy: 0
   rb: {fileID: 0}
-  explosionPrefab: {fileID: 0}
+  explosionPrefab: {fileID: 5460664913994178735, guid: db925648426faea439a2a03d2fc50d19, type: 3}
   movementTarget: {fileID: 0}
   movementTargetPosition: {x: 0, y: 0}
   moveDirectionVector: {x: 0, y: 0}
