@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 46584578}
   - component: {fileID: 46584577}
   - component: {fileID: 46584576}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -611,6 +611,18 @@ PrefabInstance:
     - target: {fileID: 4807748285894345632, guid: c176c87d40336344ba81734b31de19c6, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927428456487921793, guid: c176c87d40336344ba81734b31de19c6, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927428456487921793, guid: c176c87d40336344ba81734b31de19c6, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927428456487921793, guid: c176c87d40336344ba81734b31de19c6, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8232709144583763134, guid: c176c87d40336344ba81734b31de19c6, type: 3}
       propertyPath: m_LocalPosition.x
