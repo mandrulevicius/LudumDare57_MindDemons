@@ -96,6 +96,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4381886712384844945}
+  - component: {fileID: -6916916536464095153}
+  - component: {fileID: 2146380414722859313}
+  - component: {fileID: 739098344359738782}
   m_Layer: 0
   m_Name: BadThought
   m_TagString: Untagged
@@ -119,3 +122,103 @@ Transform:
   - {fileID: 4190321030067551855}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-6916916536464095153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7282766787157104700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a935291b7928d949ae65b8667d87d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats:
+    id: 
+    name: 
+    mass: 1
+    density: 1
+    volume: 0
+    strength: 1
+    hardness: 1
+    health: 1
+    velocity: {x: 0, y: 0}
+    speed: 0
+    speedBoostMultiplier: 0
+    fuelCapacity: 0
+    fuel: 0
+    energyCapacity: 0
+    energy: 0
+  rb: {fileID: 0}
+  explosionPrefab: {fileID: 0}
+  movementTarget: {fileID: 0}
+  movementTargetPosition: {x: 0, y: 0}
+  moveDirectionVector: {x: 0, y: 0}
+  lookDirectionVector: {x: 0, y: 0}
+  isSprinting: 0
+  isDashing: 0
+  inCombat: 0
+--- !u!50 &2146380414722859313
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7282766787157104700}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &739098344359738782
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7282766787157104700}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
