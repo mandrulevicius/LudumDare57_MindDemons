@@ -68,6 +68,7 @@ public class Entity : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         Entity otherEntity = other.gameObject.GetComponent<Entity>();
+        if(otherEntity == null) return;
         float damage = CalcDamage(otherEntity);
 
         Interactions.Add(
@@ -127,6 +128,7 @@ public class Entity : MonoBehaviour
 
     float CalcDamage(Entity otherEntity)
     {
+        
         Vector2 relativeVelocity = otherEntity.stats.velocity - stats.velocity;
         float relativeMomentum = otherEntity.stats.mass * relativeVelocity.magnitude;
         
