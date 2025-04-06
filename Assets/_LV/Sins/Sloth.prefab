@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6372073373391142416}
   - component: {fileID: 1662184107499959890}
   - component: {fileID: 1510079543843816117}
+  - component: {fileID: 1757659815997003704}
   m_Layer: 11
   m_Name: Sloth
   m_TagString: Untagged
@@ -87,7 +88,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58b32119e94a8d458ddea3c22d938cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entity: {fileID: 0}
 --- !u!50 &9079000272621823399
 Rigidbody2D:
   serializedVersion: 5
@@ -280,6 +280,21 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1757659815997003704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983602403620813200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5bba0bcc174b154295a299b56cd2584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breathRate: 0.5
+  breathMagnitude: 0.1
+  breathDirection: {x: 1, y: 1, z: 1}
 --- !u!1 &3297165312248498830
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,8 +786,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4610650596172978432, guid: 3bab7d3b3dad9714e864de09109d8549, type: 3}
+      propertyPath: fireRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4610650596172978432, guid: 3bab7d3b3dad9714e864de09109d8549, type: 3}
       propertyPath: shotForce
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4610650596172978432, guid: 3bab7d3b3dad9714e864de09109d8549, type: 3}
       propertyPath: bulletPrefab

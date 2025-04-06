@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Sin : MonoBehaviour
 {
-    [SerializeField] private Entity entity;
+    private Entity entity;
 
     private void Awake()
     {

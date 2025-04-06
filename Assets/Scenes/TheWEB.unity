@@ -837,6 +837,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 1757659815997003704, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
+      propertyPath: breathRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757659815997003704, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
+      propertyPath: breathMagnitude
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757659815997003704, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
+      propertyPath: breathDirection.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2285664995729634447, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -881,6 +893,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3297165312248498830, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
+      propertyPath: m_Name
+      value: SlothBody
+      objectReference: {fileID: 0}
     - target: {fileID: 4029702024242362408, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -907,7 +923,8 @@ PrefabInstance:
       objectReference: {fileID: 147247807}
     m_RemovedComponents:
     - {fileID: 0}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8055302220075044787, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
