@@ -37,6 +37,8 @@ public class Player : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D other)
     {
+        if (other.gameObject.layer != LayerMask.NameToLayer("Enemy") ||
+            other.gameObject.layer != LayerMask.NameToLayer("Sin")) return;
         if (tick != 0) return;
         Entity otherEntity = other.gameObject.GetComponent<Entity>();
         playerEntity.ApplyDamage(otherEntity.stats.touchDamage);
