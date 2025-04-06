@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: -6916916536464095153}
   - component: {fileID: 2146380414722859313}
   - component: {fileID: 739098344359738782}
+  - component: {fileID: 9117583967471155142}
   m_Layer: 8
   m_Name: BadThought
   m_TagString: Untagged
@@ -141,6 +142,7 @@ MonoBehaviour:
     health: 10
     velocity: {x: 0, y: 0}
     speed: 2
+    speedBoostMultiplier: 0
     touchDamage: 1
     rangedDamage: 0
   rb: {fileID: 0}
@@ -148,6 +150,8 @@ MonoBehaviour:
   movementTarget: {fileID: 0}
   movementTargetPosition: {x: 0, y: 0}
   moveDirectionVector: {x: 0, y: 0}
+  lookTarget: {fileID: 0}
+  lookTargetPosition: {x: 0, y: 0}
   lookDirectionVector: {x: 0, y: 0}
   isSprinting: 0
   isDashing: 0
@@ -216,3 +220,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &9117583967471155142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7282766787157104700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5bba0bcc174b154295a299b56cd2584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expandDuration: 2
+  xScaleModifier: 0.05
+  yScaleModifier: 0.02
+  adjustY: 0
