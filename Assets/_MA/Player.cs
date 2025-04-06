@@ -48,4 +48,23 @@ public class Player : MonoBehaviour
         Entity otherEntity = other.gameObject.GetComponent<Entity>();
         playerEntity.ApplyDamage(otherEntity.stats.touchDamage);
     }
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer != LayerMask.NameToLayer("Enemy") &&
+            other.gameObject.layer != LayerMask.NameToLayer("Sin")) return;
+        Entity otherEntity = other.gameObject.GetComponent<Entity>();
+        playerEntity.ApplyDamage(otherEntity.stats.touchDamage);
+    }
+    
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.layer != LayerMask.NameToLayer("Enemy") &&
+            other.gameObject.layer != LayerMask.NameToLayer("Sin")) return;
+        if (tick != 0 && wasHit) return;
+        wasHit = true;
+        tick++;
+        Entity otherEntity = other.gameObject.GetComponent<Entity>();
+        playerEntity.ApplyDamage(otherEntity.stats.touchDamage);
+    }
 }
