@@ -66,14 +66,12 @@ public class SlothInveraction : MonoBehaviour
             eventer.StopTalk(agreed);
             return;
         }
-
         eventer.StartTalk();
         if (agreed)
-            eventer.WriteText($"{topic[dailogCounter].speaker} \n{topic[dailogCounter].line}");
+            eventer.WriteText($"{topicYes[dailogCounter].speaker} \n{topicYes[dailogCounter].line}");
         else
         {
-            eventer.WriteText($"{topicYes[dailogCounter].speaker} \n{topicYes[dailogCounter].line}");
-            
+            eventer.WriteText($"{topic[dailogCounter].speaker} \n{topic[dailogCounter].line}");
         }
         dailogCounter++;
     }

@@ -28,6 +28,7 @@ public class InteractionEvents : MonoBehaviour
     }
     public void StartTalk()
     {
+        Time.timeScale = 0;
         if (talkingObject.active == true) return;
         interactionTextBox.active = false;
         talkingObject.active = true;
@@ -35,8 +36,9 @@ public class InteractionEvents : MonoBehaviour
 
     public void StopTalk(bool agreed)
     {
+        Time.timeScale = 1;
         talkingObject.active = false;
-        // npc.GetComponent<Entity>.inConbat = true
+        npc.GetComponent<Entity>().inCombat = !agreed;
         npc = null;
         
     }
