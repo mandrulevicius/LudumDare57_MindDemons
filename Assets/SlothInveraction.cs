@@ -7,15 +7,15 @@ public class SlothInveraction : MonoBehaviour
     private List<DialogueLine> topic = new List<DialogueLine>
     {
         new DialogueLine(
-            "<b><color=#e89b2d>SLOTH:</color></b>",
+            "<b><color=#e89b2d>Sloth:</color></b>",
             "Hey dude, maybe just chill???\nno(q) yes (e)"
         ),
         new DialogueLine(
-            "<b><color=#4aa3df>HAWK:</color></b>",
+            "<b><color=#4aa3df>You:</color></b>",
             "I'm fine I will just kick your ass"
         ),
         new DialogueLine(
-            "<b><color=#e89b2d>SLOTH:</color></b>",
+            "<b><color=#e89b2d>Sloth:</color></b>",
             "You will regret this"
         )
     };
@@ -23,15 +23,15 @@ public class SlothInveraction : MonoBehaviour
     private List<DialogueLine> topicYes = new List<DialogueLine>
     {
         new DialogueLine(
-            "<b><color=#e89b2d>SLOTH:</color></b>",
+            "<b><color=#e89b2d>Sloth:</color></b>",
             "Hey dude, maybe just chill???\nno(q) yes (e)"
         ),
         new DialogueLine(
-            "<b><color=#4aa3df>HAWK:</color></b>",
+            "<b><color=#4aa3df>You:</color></b>",
             "Ye sure!!"
         ),
         new DialogueLine(
-            "<b><color=#e89b2d>SLOTH:</color></b>",
+            "<b><color=#e89b2d>Sloth:</color></b>",
             "We will meet again"
         )
     };

@@ -24,7 +24,7 @@ public class InteractionEvents : MonoBehaviour
     public void interaction(bool agree)
     {
         if(npc == null){return;}
-        npc.GetComponent<TalkInteraction>().Interact(agree);
+        npc.GetComponent<TalkInteraction>().Interact(agree,npc.GetComponentInChildren<SpriteRenderer>().sprite);
     }
     public void StartTalk()
     {
@@ -34,6 +34,10 @@ public class InteractionEvents : MonoBehaviour
         talkingObject.active = true;
     }
 
+    public void  changePicture(Sprite sprite)
+    {
+        picture.sprite = sprite;
+    }
     public void StopTalk(bool agreed)
     {
         Time.timeScale = 1;

@@ -19,8 +19,26 @@ public class TalkInteraction : MonoBehaviour
     [SerializeField] MonoBehaviour targetScript; // Accepts any MonoBehaviour-derived component
     private bool agreed = true;
     private int talkCount = 0;
-    public void Interact(bool agree)
+    private InteractionEvents eventer;
+    private Sprite playerSprite;
+
+    private void Awake()
     {
+        eventer = GameObject.FindWithTag("Events").GetComponent<InteractionEvents>();
+        playerSprite = GameObject.FindWithTag("Player").GetComponent<SpriteRenderer>().sprite;
+
+    }
+
+    public void Interact(bool agree, Sprite sinSprite)
+    {
+        if (talkCount % 2 == 0)
+        {
+            eventer.changePicture(sinSprite);
+        }
+        else
+        {
+            eventer.changePicture(playerSprite);
+        }
         if ( talkCount==1)
         {
             agreed = agree;
