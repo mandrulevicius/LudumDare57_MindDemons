@@ -876,7 +876,7 @@ PrefabInstance:
     - target: {fileID: 5412995221221943584, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
       propertyPath: movementTarget
       value: 
-      objectReference: {fileID: 721122547}
+      objectReference: {fileID: 0}
     - target: {fileID: 8567242204240805432, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
       propertyPath: script
       value: 
@@ -9655,7 +9655,7 @@ PrefabInstance:
     - target: {fileID: 4110229621067930505, guid: a5e409b5cf94b0e4e9bbd83a785d2b66, type: 3}
       propertyPath: movementTarget
       value: 
-      objectReference: {fileID: 721122547}
+      objectReference: {fileID: 0}
     - target: {fileID: 5937583869021193221, guid: a5e409b5cf94b0e4e9bbd83a785d2b66, type: 3}
       propertyPath: m_LocalPosition.x
       value: -56.082123
