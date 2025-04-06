@@ -98,7 +98,7 @@ public class Entity : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        ApplyDamage(1);
+        // ApplyDamage(1);
     }
 
     void OnTriggerEnter2D(Collider2D other)
