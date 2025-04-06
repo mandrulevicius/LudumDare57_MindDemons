@@ -212,19 +212,12 @@ MonoBehaviour:
   stats:
     id: 
     name: 
-    mass: 1
-    density: 1
-    volume: 0
-    strength: 1
-    hardness: 1
-    health: 1
+    maxHealth: 100
+    health: 100
     velocity: {x: 0, y: 0}
     speed: 5
-    speedBoostMultiplier: 2
-    fuelCapacity: 100
-    fuel: 100
-    energyCapacity: 1
-    energy: 1
+    touchDamage: 0
+    rangedDamage: 1
   rb: {fileID: 0}
   explosionPrefab: {fileID: 5460664913994178735, guid: db925648426faea439a2a03d2fc50d19, type: 3}
   movementTarget: {fileID: 0}
@@ -234,6 +227,7 @@ MonoBehaviour:
   isSprinting: 0
   isDashing: 0
   inCombat: 1
+  isShooting: 0
 --- !u!212 &8163659824005712968
 SpriteRenderer:
   m_ObjectHideFlags: 0
