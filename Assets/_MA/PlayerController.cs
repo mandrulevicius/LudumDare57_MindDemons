@@ -58,6 +58,11 @@ public class PlayerController : MonoBehaviour
 
             _playerEntity.lookDirectionVector = (_mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue())
                                                  - player.transform.position).normalized;
+            if (_playerEntity.lookDirectionVector.x + _playerEntity.lookDirectionVector.y < 1)
+            {
+                _playerEntity.lookDirectionVector *= 1000000;
+                _playerEntity.lookDirectionVector = _playerEntity.lookDirectionVector.normalized;
+            }
         }
         else if (_playerInput.currentControlScheme == "Touch")
         {
