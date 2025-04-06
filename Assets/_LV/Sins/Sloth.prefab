@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5412995221221943584}
   - component: {fileID: 9079000272621823399}
   - component: {fileID: 647661199357724539}
-  - component: {fileID: 8567242204240805432}
+  - component: {fileID: 6372073373391142416}
   - component: {fileID: 1662184107499959890}
   m_Layer: 11
   m_Name: Sloth
@@ -236,7 +236,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8567242204240805432
+--- !u!114 &6372073373391142416
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,10 +245,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 983602403620813200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83bdbda19e85fcf46b9b23872cc9e313, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a8f096aaa7681747b3cd4e091440cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScript: {fileID: 0}
+  targetScript: {fileID: 1662184107499959890}
 --- !u!114 &1662184107499959890
 MonoBehaviour:
   m_ObjectHideFlags: 0

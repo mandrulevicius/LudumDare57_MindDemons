@@ -23,11 +23,16 @@ public class InteractionEvents : MonoBehaviour
     public void interaction()
     {
         if(npc == null){return;}
-        npc.GetComponent<InteractionEvent>().Interact();
+        npc.GetComponent<TalkInteraction>().Interact();
     }
-
-    public void writeText(string text)
+ 
+    public void StartTalk()
     {
-        textBox.text += text + "\n";
+        interactionTextBox.enabled = false;
+        image.enabled = true;
+    }
+    public void WriteText(string text)
+    {
+        textBox.text = text + "\n";
     }
 }
