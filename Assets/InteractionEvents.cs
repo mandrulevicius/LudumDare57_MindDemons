@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Image = UnityEngine.UI.Image;
 
 public class InteractionEvents : MonoBehaviour
@@ -8,15 +9,25 @@ public class InteractionEvents : MonoBehaviour
     [SerializeField] private Image picture;
     [SerializeField] private TextMeshProUGUI textBox;
     [SerializeField] private TextMeshProUGUI interactionTextBox;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public GameObject npc;
+
+   public void onnpcChanged()
     {
-        
+        Debug.Log("yas");
+        if (npc == null)
+        {interactionTextBox.enabled = false;}
+        else
+        {interactionTextBox.enabled=true;}
     }
 
-    // Update is called once per frame
-    void Update()
+    public void interaction()
     {
-        
+        if(npc == null){return;}
+        npc.GetComponent<InteractionEvent>().Interact();
+    }
+
+    public void writeText(string text)
+    {
+        textBox.text += text + "\n";
     }
 }
