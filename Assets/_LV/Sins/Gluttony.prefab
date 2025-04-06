@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 8856432041254565330}
   - component: {fileID: 7955081203209651525}
   - component: {fileID: 132318629562789294}
+  - component: {fileID: 1755499822670919337}
   m_Layer: 11
   m_Name: Gluttony
   m_TagString: Untagged
@@ -268,6 +269,7 @@ MonoBehaviour:
     health: 100
     velocity: {x: 0, y: 0}
     speed: 1
+    speedBoostMultiplier: 0
     touchDamage: 10
     rangedDamage: 10
   rb: {fileID: 0}
@@ -275,6 +277,8 @@ MonoBehaviour:
   movementTarget: {fileID: 0}
   movementTargetPosition: {x: 0, y: 0}
   moveDirectionVector: {x: 0, y: 0}
+  lookTarget: {fileID: 0}
+  lookTargetPosition: {x: 0, y: 0}
   lookDirectionVector: {x: 0, y: 0}
   isSprinting: 0
   isDashing: 0
@@ -429,3 +433,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83bbd6bde9db155448d607eb22bb4708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1755499822670919337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9201662480190868281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5bba0bcc174b154295a299b56cd2584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expandDuration: 2
+  xScaleModifier: 0.05
+  yScaleModifier: 0.02
+  adjustY: 0
