@@ -24,6 +24,7 @@ public class SimpleRoom : MonoBehaviour
         }
         foreach (GameObject npc in npcInTrigger)
         {
+            Debug.Log(npc);
             eventer.npc = npc;
             eventer.onnpcChanged();
         }

@@ -1,9 +1,5 @@
-using System;
 using UnityEngine;
 using System.Collections.Generic;
-
-
-
 public class SlothInveraction : MonoBehaviour
 {
     private InteractionEvents eventer;
@@ -49,8 +45,7 @@ public class SlothInveraction : MonoBehaviour
 
     public void Talk(bool agreed)
     {
-        Debug.Log(agreed);
-        if (topic.Count == dailogCounter)
+        if ((agreed ? topicYes.Count : topic.Count) == dailogCounter)
         {
             eventer.StopTalk(agreed);
             return;
@@ -63,9 +58,5 @@ public class SlothInveraction : MonoBehaviour
             eventer.WriteText($"{topic[dailogCounter].speaker} \n{topic[dailogCounter].line}");
         }
         dailogCounter++;
-    }
-
-    public void SayNo()
-    {
     }
 }
