@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6927428456487921793}
   - component: {fileID: 1952708263233703323}
   - component: {fileID: 8850821098051890099}
+  - component: {fileID: 7581176023743451122}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -79,6 +80,8 @@ MonoBehaviour:
   movementTarget: {fileID: 0}
   movementTargetPosition: {x: 0, y: 0}
   moveDirectionVector: {x: 0, y: 0}
+  lookTarget: {fileID: 0}
+  lookTargetPosition: {x: 0, y: 0}
   lookDirectionVector: {x: 0, y: 0}
   isSprinting: 0
   isDashing: 0
@@ -299,6 +302,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7581176023743451122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4807748285894345632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5bba0bcc174b154295a299b56cd2584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expandDuration: 2
+  xScaleModifier: 0.05
+  yScaleModifier: 0.02
+  breatheIn: {x: 1, y: 1, z: 1}
+  breatheOut: {x: 1, y: 1, z: 1}
 --- !u!1 &7954492187638553574
 GameObject:
   m_ObjectHideFlags: 0
