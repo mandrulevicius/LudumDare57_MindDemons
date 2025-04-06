@@ -3,8 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 
 
-
-public class SlothInveraction : MonoBehaviour
+public class GluttonyInteractions : MonoBehaviour
 {
     private InteractionEvents eventer;
 
@@ -65,7 +64,4 @@ public class SlothInveraction : MonoBehaviour
         dailogCounter++;
     }
 
-    public void SayNo()
-    {
-    }
 }
