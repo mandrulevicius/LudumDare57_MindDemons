@@ -63,6 +63,8 @@ MonoBehaviour:
   movementTarget: {fileID: 0}
   movementTargetPosition: {x: 0, y: 0}
   moveDirectionVector: {x: 0, y: 0}
+  lookTarget: {fileID: 0}
+  lookTargetPosition: {x: 0, y: 0}
   lookDirectionVector: {x: 0, y: 0}
   isSprinting: 0
   isDashing: 0
@@ -81,7 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 4
-  finalSizeMultiplier: 5
+  finalSizeMultiplier: 10
 --- !u!212 &330964811960515280
 SpriteRenderer:
   m_ObjectHideFlags: 0
