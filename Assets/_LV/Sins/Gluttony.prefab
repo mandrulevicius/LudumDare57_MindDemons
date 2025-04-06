@@ -187,6 +187,8 @@ GameObject:
   - component: {fileID: 4110229621067930505}
   - component: {fileID: 1147218116528609038}
   - component: {fileID: 8856432041254565330}
+  - component: {fileID: 7955081203209651525}
+  - component: {fileID: 132318629562789294}
   m_Layer: 11
   m_Name: Gluttony
   m_TagString: Untagged
@@ -402,3 +404,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7955081203209651525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9201662480190868281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a8f096aaa7681747b3cd4e091440cd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetScript: {fileID: 132318629562789294}
+--- !u!114 &132318629562789294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9201662480190868281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83bbd6bde9db155448d607eb22bb4708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

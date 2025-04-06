@@ -1,5 +1,19 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System;
 
+[Serializable]
+public struct DialogueLine
+{
+    public string speaker;
+    public string line;
+
+    public DialogueLine(string speaker, string line)
+    {
+        this.speaker = speaker;
+        this.line = line;
+    }
+}
 public class TalkInteraction : MonoBehaviour
 {
     [SerializeField] MonoBehaviour targetScript; // Accepts any MonoBehaviour-derived component

@@ -825,6 +825,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6222006361502213131}
     m_Modifications:
+    - target: {fileID: 680318893990234026, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 983602403620813200, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
       propertyPath: m_Name
       value: 'Sloth '
@@ -832,6 +836,10 @@ PrefabInstance:
     - target: {fileID: 983602403620813200, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
       propertyPath: m_Layer
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285664995729634447, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2337970157944698540, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -890,7 +898,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 147247807}
     m_RemovedComponents:
-    - {fileID: 8567242204240805432, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5002,11 +5010,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8232709144583763134, guid: c176c87d40336344ba81734b31de19c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.4
+      value: -49.38974
       objectReference: {fileID: 0}
     - target: {fileID: 8232709144583763134, guid: c176c87d40336344ba81734b31de19c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -39.9
+      value: -9.133953
       objectReference: {fileID: 0}
     - target: {fileID: 8232709144583763134, guid: c176c87d40336344ba81734b31de19c6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9696,6 +9704,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7955081203209651525, guid: a5e409b5cf94b0e4e9bbd83a785d2b66, type: 3}
+      propertyPath: targetScript
+      value: 
+      objectReference: {fileID: 5133877165317448684}
     - target: {fileID: 9201662480190868281, guid: a5e409b5cf94b0e4e9bbd83a785d2b66, type: 3}
       propertyPath: m_Name
       value: Gluttony
@@ -9705,6 +9717,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5e409b5cf94b0e4e9bbd83a785d2b66, type: 3}
+--- !u!114 &5133877165317448684 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 132318629562789294, guid: a5e409b5cf94b0e4e9bbd83a785d2b66, type: 3}
+  m_PrefabInstance: {fileID: 5133877165317448683}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83bbd6bde9db155448d607eb22bb4708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5821158201719883749
 GameObject:
   m_ObjectHideFlags: 0
