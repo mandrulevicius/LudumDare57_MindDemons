@@ -23,7 +23,7 @@ public class SlothInveraction : MonoBehaviour
     {
         new DialogueLine(
             "<b><color=#e89b2d>SLOTH:</color></b>",
-            "Hey dude, maybe just chill???"
+            "Hey dude, maybe just chill???\nno(q) yes (e)"
         ),
         new DialogueLine(
             "<b><color=#4aa3df>HAWK:</color></b>",
@@ -36,10 +36,10 @@ public class SlothInveraction : MonoBehaviour
     };
 
     private List<DialogueLine> topicYes = new List<DialogueLine>
-    {
-        new DialogueLine(
+    {  
+        new DialogueLine( 
             "<b><color=#e89b2d>SLOTH:</color></b>",
-            "Hey dude, maybe just chill???"
+            "Hey dude, maybe just chill???\nno(q) yes (e)"
         ),
         new DialogueLine(
             "<b><color=#4aa3df>HAWK:</color></b>",
