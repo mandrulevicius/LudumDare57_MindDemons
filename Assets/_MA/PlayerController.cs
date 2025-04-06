@@ -37,6 +37,12 @@ public class PlayerController : MonoBehaviour
     {
         _playerEntity.isDashing = value.isPressed;
     }
+    
+    [UsedImplicitly]
+    void OnAttack(InputValue value)
+    {
+        _playerEntity.isShooting = value.isPressed;
+    }
 
     [UsedImplicitly]
     void OnLook(InputValue value)
