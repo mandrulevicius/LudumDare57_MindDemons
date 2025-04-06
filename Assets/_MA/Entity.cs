@@ -1,6 +1,7 @@
 using System;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [Serializable]
 public struct Stats
@@ -8,31 +9,14 @@ public struct Stats
     [ReadOnly] [AllowNesting] public string id;
     [ReadOnly] [AllowNesting] public string name;
     
-    [Header("Base")]
-    [Tooltip("Max health, contact damage multiplier")] public float mass;
-    [Tooltip("Volume = Mass / Density")] public float density;
-    [Tooltip("Scale")] [ReadOnly] [AllowNesting] public float volume; 
+    public float maxHealth;
+    public float health;
     
-    [Header("Contact damage modifiers")]
-    [Tooltip("Percentage damage modifier")] public float strength;
-    [Tooltip("Flat damage modifier")] public float hardness;
-    
-    [Header("Current")]
-    [Tooltip("Current healthy mass")] public float health;
-    [Tooltip("Current velocity")] [ReadOnly] [AllowNesting] public Vector2 velocity;
-    // maybe velocity should be on entity, but then would have to pass to interaction separately
-    
-    [Header("Movement")] // rocks dont have movement, fuel
+    [ReadOnly] [AllowNesting] public Vector2 velocity;
     public float speed;
-    public float speedBoostMultiplier;
-    public float fuelCapacity;
-    public float fuel;
     
-    [Header("Energy")] // rocks don't have energyCapacity
-    [Tooltip("Combat ability max resource")] public float energyCapacity;
-    [Tooltip("Combat ability resource")] public float energy;
-    
-    
+    public float touchDamage;
+    public float rangedDamage;
 }
 
 public class Entity : MonoBehaviour
@@ -56,9 +40,8 @@ public class Entity : MonoBehaviour
 
     float _speedPerTick;
     
+    [ReadOnly] public bool inCombat;
     [ReadOnly] public bool isShooting;
-    
-    // public bool inCombat;
     
     
     // ============================= INIT =============================
@@ -75,17 +58,25 @@ public class Entity : MonoBehaviour
     // =========================== TRIGGERS ===========================
     void OnCollisionEnter2D(Collision2D other)
     {
+        // Bullet hits anything and dies
+        if (gameObject.CompareTag("Bullet"))
+        {
+            ApplyDamage(1);
+        }
+        
         Entity otherEntity = other.gameObject.GetComponent<Entity>();
+        
+        // entity hits wall and does nothing
         if (otherEntity == null)
         {
-            if (gameObject.CompareTag("Bullet"))
-            {
-                ApplyDamage(1);
-            }
             return;
         }
-        float damage = CalcDamage(otherEntity);
 
+        // only bullets damage entities
+        if (!otherEntity.CompareTag("Bullet")) return;
+        
+        float damage = CalcDamage(otherEntity);
+        
         Interactions.Add(
             stats,
             otherEntity.stats,
@@ -129,40 +120,21 @@ public class Entity : MonoBehaviour
      // ========================== FUNCTIONS ===========================
     void UpdateEntity()
     {
-        // ok for now, but should only update when stats change. LinearVelocity can be left as is.
-        // should also update health proportionally to mass change
-        if (stats.strength <= 0 || stats.density <= 0 || stats.mass <= 0 || stats.health <= 0) Die();
-        
-        stats.volume = stats.mass / stats.density;
-        
-        rb.mass = stats.mass;
-        transform.localScale = new Vector3(stats.volume, stats.volume, stats.volume);
-        
+        if (stats.maxHealth <= 0 || stats.health <= 0) Die();
         stats.velocity = rb.linearVelocity;
     }
     
     void CalcSpeed()
     {
         _speedPerTick = stats.speed * Time.fixedDeltaTime;
-        if (!isSprinting || stats.fuel <= 0) return;
-        stats.fuel -= Time.fixedDeltaTime;
-        _speedPerTick *= stats.speedBoostMultiplier;
     }
 
     float CalcDamage(Entity otherEntity)
     {
-        
-        Vector2 relativeVelocity = otherEntity.stats.velocity - stats.velocity;
-        float relativeMomentum = otherEntity.stats.mass * relativeVelocity.magnitude;
-        
-        float strengthRatio = otherEntity.stats.strength / stats.strength;
-        float hardnessDifference = otherEntity.stats.hardness - stats.hardness;
-        
-        return relativeMomentum * strengthRatio + hardnessDifference;
-        // return (relativeMomentum + hardnessDifference) * strengthRatio;
+        return otherEntity.stats.touchDamage;
     }
 
-    void ApplyDamage(float damage)
+    public void ApplyDamage(float damage)
     {
         var hitSound = GetComponent<AudioSource>();
         if (hitSound) GetComponent<AudioSource>().Play();
@@ -175,9 +147,8 @@ public class Entity : MonoBehaviour
         if (explosionPrefab)
         {
             GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-            // should already be instantiated, just disabled. should be handled on explosion itself, not on entity
-            explosion.GetComponent<Explosion>().endSize = stats.volume * 5;
-            explosion.GetComponent<Explosion>().lifetime = stats.volume;
+            explosion.GetComponent<Explosion>().endSize = transform.localScale.x * 5;
+            explosion.GetComponent<Explosion>().lifetime = transform.localScale.x;
         }
         Destroy(gameObject, 0f);
     }

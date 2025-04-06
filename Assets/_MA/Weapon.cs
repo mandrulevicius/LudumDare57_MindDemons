@@ -39,6 +39,7 @@ public class Weapon : MonoBehaviour
     {
         GetComponent<AudioSource>().Play();
         GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        bullet.GetComponent<Entity>().stats.touchDamage = parentEntity.stats.rangedDamage;
         Vector2 direction = parentEntity.lookDirectionVector;
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         bullet.layer = gameObject.layer;

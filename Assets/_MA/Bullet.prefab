@@ -31,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.49107373, y: 1.774354, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51,19 +51,12 @@ MonoBehaviour:
   stats:
     id: 
     name: 
-    mass: 1
-    density: 10
-    volume: 0
-    strength: 1
-    hardness: 1
+    maxHealth: 1
     health: 1
     velocity: {x: 0, y: 0}
     speed: 1
-    speedBoostMultiplier: 1
-    fuelCapacity: 0
-    fuel: 0
-    energyCapacity: 0
-    energy: 0
+    touchDamage: 0
+    rangedDamage: 0
   rb: {fileID: 0}
   explosionPrefab: {fileID: 5460664913994178735, guid: db925648426faea439a2a03d2fc50d19, type: 3}
   movementTarget: {fileID: 0}
@@ -73,6 +66,7 @@ MonoBehaviour:
   isSprinting: 0
   isDashing: 0
   inCombat: 0
+  isShooting: 0
 --- !u!212 &3403042726705995558
 SpriteRenderer:
   m_ObjectHideFlags: 0
