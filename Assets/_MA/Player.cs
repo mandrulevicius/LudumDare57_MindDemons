@@ -4,7 +4,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Entity playerEntity;
-    int tick = 0;
+    int tick;
     [ReadOnly] private bool wasHit;
     
     // ============================= INIT =============================
@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.layer != LayerMask.NameToLayer("Enemy") &&
             other.gameObject.layer != LayerMask.NameToLayer("Sin")) return;
-        if (tick != 0) return;
+        if (tick != 0 && wasHit) return;
         wasHit = true;
         tick++;
         Entity otherEntity = other.gameObject.GetComponent<Entity>();
