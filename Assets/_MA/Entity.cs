@@ -54,7 +54,9 @@ public class Entity : MonoBehaviour
 
     float _speedPerTick;
     
-    public bool inCombat;
+    [ReadOnly] public bool isShooting;
+    
+    // public bool inCombat;
     
     
     // ============================= INIT =============================

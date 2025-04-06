@@ -10,6 +10,8 @@ public class Weapon : MonoBehaviour
     public float fireRate = 1f;
     int tick = 0;
 
+    private bool wasShooting;
+
     void Awake()
     {
         parentEntity = GetComponentInParent<Entity>();
@@ -17,8 +19,17 @@ public class Weapon : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!parentEntity.inCombat) return;
+        if (!wasShooting && parentEntity.isShooting && tick == 0)
+        {
+            Shoot();
+            wasShooting = true;
+        }
         tick++;
+        if (!parentEntity.isShooting)
+        {
+            wasShooting = false;
+            return;
+        }
         if (tick <= fireRate * 50) return;
         tick = 0;
         Shoot();
