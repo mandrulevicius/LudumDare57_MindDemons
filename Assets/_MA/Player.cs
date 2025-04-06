@@ -2,18 +2,42 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    Entity entity;
+    Entity playerEntity;
+    int tick = 0;
     
     // ============================= INIT =============================
     void Awake()
     {
-        entity = GetComponent<Entity>();
+        playerEntity = GetComponent<Entity>();
     }
     
     // =========================== UPDATES ============================
     void FixedUpdate()
     {
-        float angle = Mathf.Atan2(entity.lookDirectionVector.y, entity.lookDirectionVector.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(playerEntity.lookDirectionVector.y, playerEntity.lookDirectionVector.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle - 90f);
+        
+        tick++;
+        if (tick <= 50) return;
+        tick = 0;
+    }
+    
+    // =========================== TRIGGERS ===========================
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        // bullets handled in entity
+        if (other.gameObject.CompareTag("Bullet")) return;
+
+        if (other.gameObject.layer != LayerMask.NameToLayer("Enemy")) return;
+        Entity otherEntity = other.gameObject.GetComponent<Entity>();
+        
+        playerEntity.ApplyDamage(otherEntity.stats.touchDamage);
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if (tick != 0) return;
+        Entity otherEntity = other.gameObject.GetComponent<Entity>();
+        playerEntity.ApplyDamage(otherEntity.stats.touchDamage);
     }
 }
