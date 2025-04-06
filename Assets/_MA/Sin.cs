@@ -4,7 +4,7 @@ using UnityEngine;
 public class Sin : MonoBehaviour
 {
     private Entity entity;
-
+    public AudioClip audioClip;
     private void Awake()
     {
         entity = GetComponent<Entity>();

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - Events
+  - Audio
   layers:
   - Default
   - TransparentFX
