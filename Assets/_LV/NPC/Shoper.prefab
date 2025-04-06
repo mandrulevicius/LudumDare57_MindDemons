@@ -98,6 +98,8 @@ GameObject:
   - component: {fileID: 2441267327137232772}
   - component: {fileID: 2856832102547328265}
   - component: {fileID: 8541783719324728636}
+  - component: {fileID: 1910612573378504212}
+  - component: {fileID: 3758964441367737672}
   m_Layer: 9
   m_Name: Shoper
   m_TagString: Untagged
@@ -194,3 +196,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1910612573378504212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4297811238450137216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a8f096aaa7681747b3cd4e091440cd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetScript: {fileID: 3758964441367737672}
+--- !u!114 &3758964441367737672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4297811238450137216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc33b5bc8a4b5745881f53955a17a38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
