@@ -42,8 +42,8 @@ public class Entity : MonoBehaviour
     [ReadOnly] public bool isDashing;
 
     float _speedPerTick;
-    
-    [ReadOnly] public bool inCombat = true;
+
+    [ReadOnly] public bool inCombat;
     [ReadOnly] public bool isShooting;
     
     
@@ -55,7 +55,6 @@ public class Entity : MonoBehaviour
         stats.id = Guid.NewGuid().ToString();
         stats.name = gameObject.name;
         UpdateEntity();
-        inCombat = true;
     }
     
     
