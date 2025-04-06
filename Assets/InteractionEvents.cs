@@ -5,29 +5,34 @@ using Image = UnityEngine.UI.Image;
 
 public class InteractionEvents : MonoBehaviour
 {
-    [SerializeField] private Image image;
+    [SerializeField] private GameObject talkingObject;
     [SerializeField] private Image picture;
     [SerializeField] private TextMeshProUGUI textBox;
-    [SerializeField] private TextMeshProUGUI interactionTextBox;
+    [SerializeField] private GameObject interactionTextBox;
     public GameObject npc;
 
    public void onnpcChanged()
     {
         Debug.Log("yas");
         if (npc == null)
-        {interactionTextBox.enabled = false;}
+        {interactionTextBox.active = false;}
         else
-        {interactionTextBox.enabled=true;}
+        {interactionTextBox.active=true;}
     }
 
     public void interaction()
     {
         if(npc == null){return;}
-        npc.GetComponent<InteractionEvent>().Interact();
+        npc.GetComponent<TalkInteraction>().Interact();
     }
-
-    public void writeText(string text)
+ 
+    public void StartTalk()
     {
-        textBox.text += text + "\n";
+        interactionTextBox.active = false;
+        talkingObject.active = true;
+    }
+    public void WriteText(string text)
+    {
+        textBox.text = text + "\n";
     }
 }

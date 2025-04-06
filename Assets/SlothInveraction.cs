@@ -3,20 +3,11 @@ using UnityEngine;
 
 public class SlothInveraction : MonoBehaviour
 {
-    private InteractionEvents eventer;
-    private void Start()
-    {
-        
-        InteractionEvents eventer = GameObject.FindWithTag("Events").GetComponent<InteractionEvents>();
-
-    }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void StartTalk()
     {
+        var eventer = GameObject.FindWithTag("Events").GetComponent<InteractionEvents>();
 
-        Debug.Log("You are talking");
-        
-        
+    eventer.StartTalk();
+    eventer.WriteText("<b><color=#e89b2d>SLOTH:</color></b> \nHey dude, maybe just chill???");
     }
 }
