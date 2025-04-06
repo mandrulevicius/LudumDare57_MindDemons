@@ -52,10 +52,6 @@ public class PlayerController : MonoBehaviour
         if (_playerInput.currentControlScheme == "Gamepad") _playerEntity.lookDirectionVector = value.Get<Vector2>();
         else if (_playerInput.currentControlScheme == "Keyboard&Mouse")
         {
-            // this is whatever
-            // Vector2 targetPos = _mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-            // Vector2 direction = targetPos - (Vector2)player.transform.position;
-
             _playerEntity.lookDirectionVector = (_mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue())
                                                  - player.transform.position).normalized;
             if (_playerEntity.lookDirectionVector.x + _playerEntity.lookDirectionVector.y < 1)
