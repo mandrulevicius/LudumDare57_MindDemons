@@ -58,16 +58,17 @@ public class Entity : MonoBehaviour
     // =========================== TRIGGERS ===========================
     void OnCollisionEnter2D(Collision2D other)
     {
+        // Bullet hits anything and dies
+        if (gameObject.CompareTag("Bullet"))
+        {
+            ApplyDamage(1);
+        }
+        
         Entity otherEntity = other.gameObject.GetComponent<Entity>();
         
         // entity hits wall and does nothing
         if (otherEntity == null)
         {
-            // Bullet hits wall and dies
-            if (gameObject.CompareTag("Bullet"))
-            {
-                ApplyDamage(1);
-            }
             return;
         }
 

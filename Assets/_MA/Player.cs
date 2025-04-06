@@ -28,7 +28,8 @@ public class Player : MonoBehaviour
         // bullets handled in entity
         if (other.gameObject.CompareTag("Bullet")) return;
 
-        if (other.gameObject.layer != LayerMask.NameToLayer("Enemy")) return;
+        if (other.gameObject.layer != LayerMask.NameToLayer("Enemy") ||
+            other.gameObject.layer != LayerMask.NameToLayer("Sin")) return;
         Entity otherEntity = other.gameObject.GetComponent<Entity>();
         
         playerEntity.ApplyDamage(otherEntity.stats.touchDamage);
