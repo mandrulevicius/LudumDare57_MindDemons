@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Bullet
+  - Events
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - Entity
   - Player
   - Enemy
-  - Shop
-  - Healer
+  - Npc
+  - 
   - Sin
   - 
   - 

@@ -42,6 +42,12 @@ public class PlayerController : MonoBehaviour
     void OnAttack(InputValue value)
     {
         _playerEntity.isShooting = value.isPressed;
+    } 
+    [UsedImplicitly]
+    void OnInteract(InputValue value)
+    {
+        var eventer = GameObject.FindWithTag("Events").GetComponent<InteractionEvents>();
+        eventer.interaction();
     }
 
     [UsedImplicitly]
