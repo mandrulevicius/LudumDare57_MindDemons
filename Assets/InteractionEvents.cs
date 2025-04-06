@@ -73,7 +73,10 @@ public class InteractionEvents : MonoBehaviour
         Time.timeScale = 1;
         talkingObject.active = false;
         if (npc.GetComponent<Entity>())
+        {
             npc.GetComponent<Entity>().inCombat = !agreed;
+            npc.GetComponent<Entity>().isShooting = !agreed;
+        }
         npc = null;
     }
 
