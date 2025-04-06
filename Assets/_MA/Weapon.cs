@@ -31,7 +31,7 @@ public class Weapon : MonoBehaviour
             return;
         }
         if (tick <= fireRate * 50) return;
-        tick = 0;
+        tick = 1;
         Shoot();
     }
 

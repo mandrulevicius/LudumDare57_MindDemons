@@ -14,6 +14,7 @@ public struct Stats
     
     [ReadOnly] [AllowNesting] public Vector2 velocity;
     public float speed;
+    public float speedBoostMultiplier; // for quick testing
     
     public float touchDamage;
     public float rangedDamage;
@@ -127,6 +128,8 @@ public class Entity : MonoBehaviour
     void CalcSpeed()
     {
         _speedPerTick = stats.speed * Time.fixedDeltaTime;
+        if (!isSprinting) return;
+        _speedPerTick *= stats.speedBoostMultiplier;
     }
 
     float CalcDamage(Entity otherEntity)
