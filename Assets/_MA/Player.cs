@@ -1,9 +1,11 @@
+using NaughtyAttributes;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     Entity playerEntity;
     int tick = 0;
+    [ReadOnly] private bool wasHit;
     
     // ============================= INIT =============================
     void Awake()
@@ -19,6 +21,7 @@ public class Player : MonoBehaviour
         
         tick++;
         if (tick <= 50) return;
+        wasHit = false;
         tick = 0;
     }
     
@@ -40,6 +43,8 @@ public class Player : MonoBehaviour
         if (other.gameObject.layer != LayerMask.NameToLayer("Enemy") &&
             other.gameObject.layer != LayerMask.NameToLayer("Sin")) return;
         if (tick != 0) return;
+        wasHit = true;
+        tick++;
         Entity otherEntity = other.gameObject.GetComponent<Entity>();
         playerEntity.ApplyDamage(otherEntity.stats.touchDamage);
     }

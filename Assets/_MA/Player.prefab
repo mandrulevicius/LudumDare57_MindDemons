@@ -216,6 +216,7 @@ MonoBehaviour:
     health: 100
     velocity: {x: 0, y: 0}
     speed: 5
+    speedBoostMultiplier: 5
     touchDamage: 0
     rangedDamage: 1
   rb: {fileID: 0}
