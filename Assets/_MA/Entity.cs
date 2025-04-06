@@ -32,7 +32,9 @@ public class Entity : MonoBehaviour
     [ReadOnly] public Vector2 movementTargetPosition;
     [ReadOnly] public Vector2 moveDirectionVector;
     
-    // AI needs lookTarget to know where to look.
+    
+    public GameObject lookTarget;
+    [ReadOnly] public Vector2 lookTargetPosition;
     [ReadOnly] public Vector2 lookDirectionVector;
     
     
@@ -41,7 +43,7 @@ public class Entity : MonoBehaviour
 
     float _speedPerTick;
     
-    [ReadOnly] public bool inCombat;
+    [ReadOnly] public bool inCombat = true;
     [ReadOnly] public bool isShooting;
     
     
@@ -53,6 +55,7 @@ public class Entity : MonoBehaviour
         stats.id = Guid.NewGuid().ToString();
         stats.name = gameObject.name;
         UpdateEntity();
+        inCombat = true;
     }
     
     
@@ -104,6 +107,9 @@ public class Entity : MonoBehaviour
     void FixedUpdate()
     {
         UpdateEntity();
+        
+        if (lookTarget) lookTargetPosition = lookTarget.transform.position;
+        if (lookTargetPosition != Vector2.zero) lookDirectionVector = lookTargetPosition - (Vector2) transform.position;
         
         if (movementTarget) movementTargetPosition = movementTarget.transform.position;
         if (movementTargetPosition != Vector2.zero) moveDirectionVector = (movementTargetPosition - (Vector2)transform.position).normalized;
