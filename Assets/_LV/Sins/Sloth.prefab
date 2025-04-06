@@ -218,6 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58b32119e94a8d458ddea3c22d938cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 0}
 --- !u!50 &9079000272621823399
 Rigidbody2D:
   serializedVersion: 5
@@ -914,7 +915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4610650596172978432, guid: 3bab7d3b3dad9714e864de09109d8549, type: 3}
       propertyPath: fireRate
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4610650596172978432, guid: 3bab7d3b3dad9714e864de09109d8549, type: 3}
       propertyPath: shotForce
@@ -924,6 +925,18 @@ PrefabInstance:
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 8159073362377156603, guid: be0d2cb98947dbe44ae33e13ddeaabee, type: 3}
+    - target: {fileID: 7901234395095239293, guid: 3bab7d3b3dad9714e864de09109d8549, type: 3}
+      propertyPath: m_Volume
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 7901234395095239293, guid: 3bab7d3b3dad9714e864de09109d8549, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 278f86d5289f6554fafd75a60891049d, type: 3}
+    - target: {fileID: 7901234395095239293, guid: 3bab7d3b3dad9714e864de09109d8549, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 278f86d5289f6554fafd75a60891049d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

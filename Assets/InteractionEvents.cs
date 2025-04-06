@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 using Image = UnityEngine.UI.Image;
 
 public class InteractionEvents : MonoBehaviour
@@ -11,6 +12,7 @@ public class InteractionEvents : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textBox;
     [SerializeField] private GameObject interactionTextBox;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] public Slider mentalSlider;
     public AudioClip audioClip;
     public AudioClip genericClip;
     public GameObject npc;

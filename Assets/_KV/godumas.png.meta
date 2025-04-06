@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      godumas_0: -859540934109820053
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

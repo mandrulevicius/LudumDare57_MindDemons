@@ -1,15 +1,18 @@
+using System;
 using NaughtyAttributes;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     Entity playerEntity;
+    InteractionEvents eventer;
     int tick;
     [ReadOnly] private bool wasHit;
     
     // ============================= INIT =============================
     void Awake()
     {
+        eventer = GameObject.FindWithTag("Events").GetComponent<InteractionEvents>();
         playerEntity = GetComponent<Entity>();
     }
     
@@ -18,13 +21,18 @@ public class Player : MonoBehaviour
     {
         float angle = Mathf.Atan2(playerEntity.lookDirectionVector.y, playerEntity.lookDirectionVector.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle - 90f);
-        
+        eventer.mentalSlider.value = playerEntity.stats.health/100;
         tick++;
         if (tick <= 50) return;
         wasHit = false;
         tick = 0;
     }
-    
+
+    private void OnDestroy()
+    {
+        eventer.mentalSlider.value = 0;
+    }
+
     // =========================== TRIGGERS ===========================
     void OnCollisionEnter2D(Collision2D other)
     {

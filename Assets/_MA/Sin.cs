@@ -14,4 +14,9 @@ public class Sin : MonoBehaviour
     {
         if (entity.inCombat) entity.isShooting = true;
     }
+
+    private void OnDestroy()
+    {
+        GameObject.FindWithTag("Events").GetComponent<InteractionEvents>().PlayGenericClip();
+    }
 }
