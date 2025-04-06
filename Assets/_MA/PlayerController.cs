@@ -10,13 +10,15 @@ public class PlayerController : MonoBehaviour
     Entity _playerEntity;
     
     PlayerInput _playerInput;
-    
+
+    private InteractionEvents eventer;
     // ============================= INIT =============================
     void Awake()
     {
         _playerEntity = player.GetComponent<Entity>();
         _playerInput = GetComponent<PlayerInput>();
         _mainCamera = Camera.main;
+        eventer =  GameObject.FindWithTag("Events").GetComponent<InteractionEvents>();
     }
     
     // =========================== TRIGGERS ===========================
@@ -46,8 +48,12 @@ public class PlayerController : MonoBehaviour
     [UsedImplicitly]
     void OnInteract(InputValue value)
     {
-        var eventer = GameObject.FindWithTag("Events").GetComponent<InteractionEvents>();
-        eventer.interaction();
+        eventer.interaction(true);
+    }
+
+    void OnNo(InputValue value)
+    {
+        eventer.interaction(false);
     }
 
     [UsedImplicitly]

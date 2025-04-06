@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -20,16 +21,24 @@ public class InteractionEvents : MonoBehaviour
         {interactionTextBox.active=true;}
     }
 
-    public void interaction()
+    public void interaction(bool agree)
     {
         if(npc == null){return;}
-        npc.GetComponent<TalkInteraction>().Interact();
+        npc.GetComponent<TalkInteraction>().Interact(agree);
     }
- 
     public void StartTalk()
     {
+        if (talkingObject.active == true) return;
         interactionTextBox.active = false;
         talkingObject.active = true;
+    }
+
+    public void StopTalk(bool agreed)
+    {
+        talkingObject.active = false;
+        // npc.GetComponent<Entity>.inConbat = true
+        npc = null;
+        
     }
     public void WriteText(string text)
     {
