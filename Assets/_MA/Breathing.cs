@@ -27,10 +27,13 @@ public class Breathing : MonoBehaviour
 
     private void Awake()
     {
-        breatheIn.x -= xScaleModifier;
-        breatheIn.y += yScaleModifier;
-        breatheOut.x += xScaleModifier;
-        breatheOut.y -= yScaleModifier;
+        breatheIn = transform.localScale;
+        breatheOut = transform.localScale;
+        
+        breatheIn.x -= xScaleModifier * breatheIn.x;
+        breatheIn.y += yScaleModifier * breatheIn.y;
+        breatheOut.x += xScaleModifier * breatheOut.x;
+        breatheOut.y -= yScaleModifier * breatheOut.y;
         
         transform.localScale = breatheOut;
         startScale = breatheOut;
