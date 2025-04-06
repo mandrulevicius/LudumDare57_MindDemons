@@ -8,6 +8,6 @@ public class SlothInveraction : MonoBehaviour
         var eventer = GameObject.FindWithTag("Events").GetComponent<InteractionEvents>();
 
     eventer.StartTalk();
-    eventer.WriteText("The Fuck you want?");
+    eventer.WriteText("<b><color=#e89b2d>SLOTH:</color></b> \nHey dude, maybe just chill???");
     }
 }
