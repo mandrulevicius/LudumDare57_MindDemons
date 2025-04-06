@@ -1,7 +1,6 @@
 using System;
 using NaughtyAttributes;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 [Serializable]
 public struct Stats
