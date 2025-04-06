@@ -113,9 +113,6 @@ public class Entity : MonoBehaviour
     {
         UpdateEntity();
         
-        float angle = Mathf.Atan2(lookDirectionVector.y, lookDirectionVector.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle - 90f);
-        
         if (movementTarget) movementTargetPosition = movementTarget.transform.position;
         if (movementTargetPosition != Vector2.zero) moveDirectionVector = (movementTargetPosition - (Vector2)transform.position).normalized;
 
