@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gaslumas_0: -4114626990659098939
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

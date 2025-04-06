@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tingumas_0: 4548307426747025879
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
