@@ -31,6 +31,8 @@ public struct Stats
     [Header("Energy")] // rocks don't have energyCapacity
     [Tooltip("Combat ability max resource")] public float energyCapacity;
     [Tooltip("Combat ability resource")] public float energy;
+    
+    
 }
 
 public class Entity : MonoBehaviour
@@ -92,6 +94,11 @@ public class Entity : MonoBehaviour
         );
         
         ApplyDamage(damage);
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        ApplyDamage(1);
     }
 
     void OnTriggerEnter2D(Collider2D other)
