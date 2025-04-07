@@ -16,6 +16,7 @@ public class InteractionEvents : MonoBehaviour
     [SerializeField] private GameObject interactionTextBox;
     [SerializeField] public Slider mentalSlider;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip finito;
     public AudioClip audioClip;
     public AudioClip endOfBattleAudio;
     [SerializeField] private AudioSource genericAudioSource;
@@ -103,7 +104,7 @@ public class InteractionEvents : MonoBehaviour
         Time.timeScale = 1;
         talkingObject.active = false;
         var npcEntity = npc.GetComponent<Entity>();
-        if (npcEntity)
+        if (npcEntity && npc.tag !="Boss")
         {
             npcEntity.inCombat = !agreed;
             npcEntity.isShooting = !agreed;
@@ -116,6 +117,16 @@ public class InteractionEvents : MonoBehaviour
         npc = null;
     }
 
+    public void won()
+    {
+        audioSource.clip = finito;
+        audioSource.Play();
+        interactionTextBox.active = false;
+        talkingObject.active = true;
+        textBox.text = "From now on depths of my mind are pure.\n (Press r to reset || q to quit)";
+        picture.sprite =  GameObject.FindWithTag("Player").GetComponent<Player>().body.GetComponent<SpriteRenderer>().sprite;
+        GameObject.FindWithTag("Controller").GetComponent<PlayerController>().GameEnded = true;
+    }
     public void forReset()
     {
         interactionTextBox.active = false;

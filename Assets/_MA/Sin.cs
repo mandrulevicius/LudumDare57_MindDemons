@@ -22,7 +22,7 @@ public class Sin : MonoBehaviour
     private void OnDestroy()
     {
         if (!gameObject.scene.isLoaded) return;
-
+        if(gameObject.tag!="Boss")
         GameObject.FindWithTag("Events").GetComponent<InteractionEvents>().PlayGenericClip();
     }
 

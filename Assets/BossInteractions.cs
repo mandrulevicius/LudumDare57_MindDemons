@@ -62,8 +62,8 @@ public class BossInteractions : MonoBehaviour
         if(agreed && topicYes.Count == dailogCounter)
         {            
             dailogCounter = topicYes.Count;
-            bossEvents.StartBattle();
             eventer.StopTalk(agreed);
+            bossEvents.StartBattle();
             return;
         }
         eventer.StartTalk();
