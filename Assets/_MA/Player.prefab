@@ -78,7 +78,7 @@ MonoBehaviour:
     speed: 5
     speedBoostMultiplier: 5
     touchDamage: 0
-    rangedDamage: 1
+    rangedDamage: 10
     armor: 0
     attackSpeed: 0
   rb: {fileID: 0}

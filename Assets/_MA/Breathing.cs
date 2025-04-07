@@ -29,15 +29,16 @@ public class Breathing : MonoBehaviour
 
     private void Awake()
     {
-        breatheIn = transform.localScale;
-        breatheOut = transform.localScale;
+        if (!body) return;
+        breatheIn = body.transform.localScale;
+        breatheOut = body.transform.localScale;
         
         breatheIn.x -= xScaleModifier * breatheIn.x;
         breatheIn.y += yScaleModifier * breatheIn.y;
         breatheOut.x += xScaleModifier * breatheOut.x;
         breatheOut.y -= yScaleModifier * breatheOut.y;
         
-        transform.localScale = breatheOut;
+        body.transform.localScale = breatheOut;
         startScale = breatheOut;
         targetScale = breatheIn;
 
@@ -54,8 +55,10 @@ public class Breathing : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // return;
+        if (!body) return;
         currentTime += Time.fixedDeltaTime;
-        transform.localScale = Vector3.Lerp(startScale, targetScale, currentTime / expandDuration);
+        body.transform.localScale = Vector3.Lerp(startScale, targetScale, currentTime / expandDuration);
         if (adjustY && body) body.transform.localPosition = Vector3.Lerp(startPos, targetPos, currentTime / expandDuration);
         if (!(currentTime >= expandDuration)) return;
         currentTime = 0f;
