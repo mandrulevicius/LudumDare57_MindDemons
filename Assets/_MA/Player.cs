@@ -8,29 +8,13 @@ public class Player : MonoBehaviour
     InteractionEvents eventer;
     int tick;
     [ReadOnly] private bool wasHit;
+    public bool hasDash;
     
     // ============================= INIT =============================
     void Awake()
     {
         eventer = GameObject.FindWithTag("Events").GetComponent<InteractionEvents>();
         playerEntity = GetComponent<Entity>();
-    }
-    
-    // =========================== UPDATES ============================
-    void FixedUpdate()
-    {
-        float angle = Mathf.Atan2(playerEntity.lookDirectionVector.y, playerEntity.lookDirectionVector.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle - 90f);
-        eventer.mentalSlider.value = playerEntity.stats.health/100;
-        tick++;
-        if (tick <= 50) return;
-        wasHit = false;
-        tick = 0;
-    }
-
-    private void OnDestroy()
-    {
-        eventer.mentalSlider.value = 0;
     }
 
     // =========================== TRIGGERS ===========================
@@ -74,5 +58,22 @@ public class Player : MonoBehaviour
         tick++;
         Entity otherEntity = other.gameObject.GetComponent<Entity>();
         playerEntity.ApplyDamage(otherEntity.stats.touchDamage);
+    }
+    
+    private void OnDestroy()
+    {
+        eventer.mentalSlider.value = 0;
+    }
+    
+    // =========================== UPDATES ============================
+    void FixedUpdate()
+    {
+        float angle = Mathf.Atan2(playerEntity.lookDirectionVector.y, playerEntity.lookDirectionVector.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, angle - 90f);
+        eventer.mentalSlider.value = playerEntity.stats.health/playerEntity.stats.maxHealth;
+        tick++;
+        if (tick <= 50) return;
+        wasHit = false;
+        tick = 0;
     }
 }

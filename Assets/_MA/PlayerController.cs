@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     
     [SerializeField] GameObject player;
     Entity _playerEntity;
+    Player playerScript;
     
     PlayerInput _playerInput;
 
@@ -51,6 +52,7 @@ public class PlayerController : MonoBehaviour
         eventer.interaction(true);
     }
 
+    [UsedImplicitly]
     void OnNo(InputValue value)
     {
         eventer.interaction(false);
