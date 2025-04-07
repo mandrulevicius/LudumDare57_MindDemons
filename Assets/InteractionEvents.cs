@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -7,42 +8,62 @@ using Image = UnityEngine.UI.Image;
 
 public class InteractionEvents : MonoBehaviour
 {
+    public GameObject npc;
     [SerializeField] private GameObject talkingObject;
     [SerializeField] private Image picture;
     [SerializeField] private TextMeshProUGUI textBox;
     [SerializeField] private GameObject interactionTextBox;
-    [SerializeField] private AudioSource audioSource;
     [SerializeField] public Slider mentalSlider;
+    [SerializeField] private AudioSource audioSource;
     public AudioClip audioClip;
+    [SerializeField] private AudioSource genericAudioSource;
     public AudioClip genericClip;
-    public GameObject npc;
+    public float fadeDuration = 1.5f;
 
     public void onnpcChanged()
     {
         if (npc == null)
         {
-            Invoke(nameof(PlayGenericClip), audioSource.clip.length - audioSource.time);
             interactionTextBox.active = false;
+            StartCoroutine(CrossFadeRoutine(audioSource, genericAudioSource));
         }
         else
         {
             interactionTextBox.active = true;
         }
     }
-    
+
     public void PlayGenericClip()
     {
         audioSource.clip = genericClip;
         audioSource.Play();
     }
+
     public void PlayNewAudio()
     {
         audioSource.clip = audioClip;
-        audioSource.Play();
+        StartCoroutine(CrossFadeRoutine(genericAudioSource, audioSource));
     }
-    public void playAudio()
+
+    private IEnumerator CrossFadeRoutine(AudioSource fromSource, AudioSource toSource)
     {
-        Invoke(nameof(PlayNewAudio), audioSource.clip.length - audioSource.time);
+        float time = 0f;
+        float fromStart = fromSource.volume;
+        float toStart = toSource.volume;
+
+        if (!toSource.isPlaying)
+            toSource.Play();
+
+        while (time < fadeDuration)
+        {
+            float t = time / fadeDuration;
+            fromSource.volume = Mathf.Lerp(fromStart, 0f, t);
+            toSource.volume = Mathf.Lerp(toStart, 1f, t);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        fromSource.volume = 0f;
+        toSource.volume = 1f;
     }
 
     public void interaction(bool agree)
@@ -77,6 +98,7 @@ public class InteractionEvents : MonoBehaviour
             npc.GetComponent<Entity>().inCombat = !agreed;
             npc.GetComponent<Entity>().isShooting = !agreed;
         }
+
         npc = null;
     }
 
