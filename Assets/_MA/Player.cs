@@ -80,7 +80,9 @@ public class Player : MonoBehaviour
     
     private void OnDestroy()
     {
+        eventer.forReset();
         eventer.mentalSlider.value = 0;
+        
     }
     
     // =========================== UPDATES ============================

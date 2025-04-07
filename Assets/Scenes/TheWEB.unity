@@ -4630,7 +4630,7 @@ GameObject:
   - component: {fileID: 869273248}
   m_Layer: 0
   m_Name: PlayerController
-  m_TagString: Untagged
+  m_TagString: Controller
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4691,6 +4691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 721122547}
+  GameEnded: 0
 --- !u!4 &869273251
 Transform:
   m_ObjectHideFlags: 0

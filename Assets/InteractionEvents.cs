@@ -116,6 +116,14 @@ public class InteractionEvents : MonoBehaviour
         npc = null;
     }
 
+    public void forReset()
+    {
+        interactionTextBox.active = false;
+        talkingObject.active = true;
+        textBox.text = "I went Insane...\n (Press r to reset || q to quit)";
+        picture.sprite =  GameObject.FindWithTag("Boss").GetComponent<Sin>().body.GetComponent<SpriteRenderer>().sprite;
+        GameObject.FindWithTag("Controller").GetComponent<PlayerController>().GameEnded = true;
+    }
     public void WriteText(string text)
     {
         textBox.text = text + "\n";

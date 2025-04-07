@@ -12,6 +12,8 @@ TagManager:
   - SinPlaces
   - Heart
   - BossWalls
+  - Boss
+  - Controller
   layers:
   - Default
   - TransparentFX
