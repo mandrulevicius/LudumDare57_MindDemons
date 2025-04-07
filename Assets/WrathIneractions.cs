@@ -1,39 +1,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GreedInteractions : MonoBehaviour
+public class WrathIneractions : MonoBehaviour
 {
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     private InteractionEvents eventer;
 
     private List<DialogueLine> topic = new List<DialogueLine>
     {
         new DialogueLine(
-            "<b><color=green>Greed:</color></b>",
-            "Do need everything?\n<i>no(q) yes (e)</i>"
+            "<b><color=red>Wrath:</color></b>",
+            "Are you angry?\n<i>no(q) yes (e)</i>"
         ),
         new DialogueLine(
             "<b><color=#4aa3df>You:</color></b>",
-            "I have everything I need."
+            "Nope, I'm feeling quite calm at this momment."
         ),
         new DialogueLine(
-            "<b><color=green>Greed:</color></b>",
-            "Well then I will give you a freebie!"
+            "<b><color=red>Wrath:</color></b>",
+            "Well you wont now!"
         )
     };
 
     private List<DialogueLine> topicYes = new List<DialogueLine>
     {
         new DialogueLine(
-            "<b><color=green>Greed:</color></b>",
-            "Do need everything?\n<i>no(q) yes (e)</i>"
+            "<b><color=red>Wrath:</color></b>",
+            "Are you angry?\n<i>no(q) yes (e)</i>"
         ),
         new DialogueLine(
             "<b><color=#4aa3df>You:</color></b>",
-            "Well i would like all the riches."
+            "I really am!!!"
         ),
         new DialogueLine(
-            "<b><color=green>Greed:</color></b>",
-            "I like your attitude, see you later."
+            "<b><color=red>Wrath:</color></b>",
+            "That's my boy, see you later."
         )
     };
 
