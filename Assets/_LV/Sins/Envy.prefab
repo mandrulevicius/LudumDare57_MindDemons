@@ -289,8 +289,8 @@ GameObject:
   - component: {fileID: 4110229621067930505}
   - component: {fileID: 8856432041254565330}
   - component: {fileID: 7955081203209651525}
-  - component: {fileID: 132318629562789294}
   - component: {fileID: 7277097918834561752}
+  - component: {fileID: 1819721076304959373}
   m_Layer: 11
   m_Name: Envy
   m_TagString: Untagged
@@ -497,19 +497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8f096aaa7681747b3cd4e091440cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScript: {fileID: 132318629562789294}
---- !u!114 &132318629562789294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9201662480190868281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83bbd6bde9db155448d607eb22bb4708, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  targetScript: {fileID: 1819721076304959373}
 --- !u!114 &7277097918834561752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -525,3 +513,15 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 8b8eff9922fc2224fb2e577d2cf31891, type: 3}
   healthBar: {fileID: 3457335587595189215}
   body: {fileID: 2058083196156459930}
+--- !u!114 &1819721076304959373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9201662480190868281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ee58e017a8049419b4b4bed9ed0c19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

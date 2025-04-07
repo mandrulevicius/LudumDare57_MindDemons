@@ -8,14 +8,15 @@ public class Sin : MonoBehaviour
     private float maxHealth;
     private float currentHealth;
     private float scalex;
-    
+
     [SerializeField] public GameObject body;
-    
+
     private void Awake()
     {
         entity = GetComponent<Entity>();
-        maxHealth = entity.stats.health;
-        if(healthBar) scalex = healthBar.transform.localScale.x;
+        if (entity)
+            maxHealth = entity.stats.health;
+        if (healthBar) scalex = healthBar.transform.localScale.x;
     }
 
     private void OnDestroy()
@@ -27,9 +28,10 @@ public class Sin : MonoBehaviour
 
     private void FixedUpdate()
     {
-        currentHealth = entity.stats.health;
-        if(body) body.transform.rotation = Quaternion.Euler(0, entity.lookDirectionVector.x < 0 ? 180 : 0, 0);
-        if(healthBar)
+        if (!entity) return;
+            currentHealth = entity.stats.health;
+        if (body) body.transform.rotation = Quaternion.Euler(0, entity.lookDirectionVector.x < 0 ? 180 : 0, 0);
+        if (healthBar)
         {
             Vector3 scale = healthBar.transform.localScale;
             scale.x = scalex * (currentHealth / maxHealth);
