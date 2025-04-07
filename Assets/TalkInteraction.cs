@@ -29,6 +29,10 @@ public class TalkInteraction : MonoBehaviour
 
     }
 
+    public void resetTalk()
+    {
+        talkCount = 0;
+    }
     public void Interact(bool agree, Sprite sinSprite)
     {
         if (talkCount % 2 == 0)
