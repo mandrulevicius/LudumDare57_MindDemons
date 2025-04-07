@@ -6151,6 +6151,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5210458070122809015, guid: c176c87d40336344ba81734b31de19c6, type: 3}
+      propertyPath: frontLight
+      value: 
+      objectReference: {fileID: 1625500830}
     - target: {fileID: 8232709144583763134, guid: c176c87d40336344ba81734b31de19c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.360258
@@ -7694,6 +7698,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 5.13}
   m_EdgeRadius: 0
+--- !u!1 &1625500830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8462792916578072102, guid: c176c87d40336344ba81734b31de19c6, type: 3}
+  m_PrefabInstance: {fileID: 1245905860}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1632001843
 GameObject:
   m_ObjectHideFlags: 0

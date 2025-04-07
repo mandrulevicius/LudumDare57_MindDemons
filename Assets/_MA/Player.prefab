@@ -55,6 +55,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasDash: 0
+  frontLight: {fileID: 8462792916578072102}
   body: {fileID: 5109591317935693370}
 --- !u!114 &2365676078368846501
 MonoBehaviour:
@@ -155,7 +156,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4807748285894345632}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

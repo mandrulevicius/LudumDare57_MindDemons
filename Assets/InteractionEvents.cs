@@ -25,6 +25,7 @@ public class InteractionEvents : MonoBehaviour
 
     public void onnpcChanged()
     {
+        Debug.Log("here");
         if (npc == null)
         {
             interactionTextBox.active = false;

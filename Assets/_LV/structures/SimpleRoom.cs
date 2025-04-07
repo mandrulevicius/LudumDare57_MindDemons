@@ -19,6 +19,7 @@ public class SimpleRoom : MonoBehaviour
         foreach (GameObject enemy in enemiesInTrigger)
         {
             enemy.GetComponent<Entity>().movementTarget = other.gameObject;
+            enemy.GetComponent<Entity>().inCombat = true;
             if(enemy.GetComponent<EvilThought>().audioClip && once==0)
             eventer.audioClip = enemy.GetComponent<EvilThought>().audioClip;
             if(enemy.GetComponent<EvilThought>().EndOfBattleAudioClip && once==0)
