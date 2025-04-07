@@ -7,6 +7,7 @@ TagManager:
   - Bullet
   - Events
   - Audio
+  - HealthBar
   layers:
   - Default
   - TransparentFX
