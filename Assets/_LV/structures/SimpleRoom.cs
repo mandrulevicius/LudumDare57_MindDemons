@@ -19,11 +19,13 @@ public class SimpleRoom : MonoBehaviour
         }  
         foreach (GameObject sin in sinsInTrigger)
         {
-            Debug.Log(sin);
             eventer.npc = sin;
             eventer.onnpcChanged();
-            eventer.audioClip = sin.GetComponent<Sin>().audioClip;
-            eventer.playAudio();
+            if(sin.GetComponent<Sin>().audioClip)
+            {
+                eventer.audioClip = sin.GetComponent<Sin>().audioClip;
+                eventer.PlayNewAudio();
+            }
 
         }
         foreach (GameObject npc in npcInTrigger)
