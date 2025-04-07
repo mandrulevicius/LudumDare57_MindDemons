@@ -17,6 +17,9 @@ public struct Stats
     
     public float touchDamage;
     public float rangedDamage;
+    
+    public float armor;
+    public float attackSpeed;
 }
 
 public class Entity : MonoBehaviour
@@ -138,7 +141,7 @@ public class Entity : MonoBehaviour
 
     float CalcDamage(Entity otherEntity)
     {
-        return otherEntity.stats.touchDamage;
+        return otherEntity.stats.touchDamage / 1 + stats.armor;
     }
 
     public void ApplyDamage(float damage)

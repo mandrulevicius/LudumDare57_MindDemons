@@ -30,7 +30,7 @@ public class Weapon : MonoBehaviour
             wasShooting = false;
             return;
         }
-        if (tick <= fireRate * 50) return;
+        if (tick <= fireRate * 50 / (1 + parentEntity.stats.attackSpeed)) return;
         tick = 1;
         Shoot();
     }
