@@ -68,11 +68,14 @@ public class BossInteractions : MonoBehaviour
         }
         eventer.StartTalk();
         if (agreed)
+        {
             eventer.WriteText($"{topicYes[dailogCounter].speaker} \n{topicYes[dailogCounter].line}");
+        dailogCounter++;
+        }
         else
         {
             eventer.WriteText($"{topic[dailogCounter].speaker} \n{topic[dailogCounter].line}");
-        }
         dailogCounter++;
+        }
     }
 }

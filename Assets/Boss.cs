@@ -29,11 +29,7 @@ public class Boss : MonoBehaviour
         }
         for (int i = 0; i < Mathf.Min(sins.Count, places.Count); i++)
         {
-            // Move the entire sin GameObject, including all its children
-            sins[i].transform.SetParent(places[i].transform); 
-            sins[i].transform.localPosition = Vector3.zero; 
-
-            // Ensure relevant Entity component is updated for combat
+            sins[i].transform.position = places[i].transform.position;
             var entity = sins[i].GetComponent<Entity>();
             if (entity != null)
             {
