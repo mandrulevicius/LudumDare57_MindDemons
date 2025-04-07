@@ -24,6 +24,11 @@ public class InteractionEvents : MonoBehaviour
     public float fadeDuration = 1.5f;
     public bool bossBattleOn = false;
 
+    private void Awake()
+    {
+        Time.timeScale = 1;
+    }
+
     public void onnpcChanged()
     {
         if (npc == null)
