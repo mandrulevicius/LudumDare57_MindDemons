@@ -65,11 +65,14 @@ public class Entity : MonoBehaviour
     // =========================== TRIGGERS ===========================
     void OnCollisionEnter2D(Collision2D other)
     {
+        
         // Bullet hits anything and dies
         if (gameObject.CompareTag("Bullet"))
         {
             ApplyDamage(1);
+            // return;
         }
+        
 
         if (gameObject.CompareTag("Heart") && other.gameObject.CompareTag("Player"))
         {
@@ -77,16 +80,24 @@ public class Entity : MonoBehaviour
         }
         
         Entity otherEntity = other.gameObject.GetComponent<Entity>();
+        if (!otherEntity) otherEntity = other.gameObject.GetComponentInParent<Entity>();
+        
         
         // entity hits wall and does nothing
         if (otherEntity == null)
         {
             return;
         }
+        
+        if(gameObject.CompareTag("Bullet"))
+        {
+            otherEntity.ApplyDamage(CalcDamage(this));
+            return;
+        }
 
         // only bullets damage entities
         if (!otherEntity.CompareTag("Bullet")) return;
-        
+
         
         
         float damage = CalcDamage(otherEntity);
@@ -99,6 +110,8 @@ public class Entity : MonoBehaviour
         // );
         
         ApplyDamage(damage);
+        
+
     }
 
     private void OnTriggerStay2D(Collider2D other)
