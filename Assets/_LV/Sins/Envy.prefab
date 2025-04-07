@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3315087232731104294}
   - component: {fileID: 5228027645816637969}
   - component: {fileID: 3436570312006374351}
+  - component: {fileID: 8591324195750529187}
   m_Layer: 11
   m_Name: pavydas_0
   m_TagString: Untagged
@@ -397,6 +398,22 @@ PolygonCollider2D:
       - {x: -1.415, y: -6.995}
       - {x: -0.815, y: -6.9649997}
   m_UseDelaunayMesh: 0
+--- !u!114 &8591324195750529187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058083196156459930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5bba0bcc174b154295a299b56cd2584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expandDuration: 2
+  xScaleModifier: 0.1
+  yScaleModifier: 0.05
+  adjustY: 1
 --- !u!1 &3457335587595189215
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,7 +645,6 @@ GameObject:
   - component: {fileID: 8856432041254565330}
   - component: {fileID: 7955081203209651525}
   - component: {fileID: 132318629562789294}
-  - component: {fileID: 1755499822670919337}
   - component: {fileID: 7277097918834561752}
   m_Layer: 11
   m_Name: Envy
@@ -715,6 +731,7 @@ MonoBehaviour:
     rangedDamage: 10
     armor: 0
     attackSpeed: 0
+    explosionSize: 3
   rb: {fileID: 0}
   explosionPrefab: {fileID: 5460664913994178735, guid: db925648426faea439a2a03d2fc50d19, type: 3}
   movementTarget: {fileID: 0}
@@ -876,23 +893,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83bbd6bde9db155448d607eb22bb4708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1755499822670919337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9201662480190868281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5bba0bcc174b154295a299b56cd2584, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  expandDuration: 2
-  xScaleModifier: 0.1
-  yScaleModifier: 0.05
-  adjustY: 1
-  body: {fileID: 2058083196156459930}
 --- !u!114 &7277097918834561752
 MonoBehaviour:
   m_ObjectHideFlags: 0

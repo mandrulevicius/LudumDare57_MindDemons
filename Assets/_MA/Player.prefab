@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6927428456487921793}
   - component: {fileID: 1952708263233703323}
   - component: {fileID: 8850821098051890099}
-  - component: {fileID: 7581176023743451122}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -81,6 +80,7 @@ MonoBehaviour:
     rangedDamage: 10
     armor: 0
     attackSpeed: 0
+    explosionSize: 0
   rb: {fileID: 0}
   explosionPrefab: {fileID: 5460664913994178735, guid: db925648426faea439a2a03d2fc50d19, type: 3}
   movementTarget: {fileID: 0}
@@ -308,23 +308,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7581176023743451122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4807748285894345632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5bba0bcc174b154295a299b56cd2584, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  expandDuration: 2
-  xScaleModifier: 0.05
-  yScaleModifier: 0.02
-  adjustY: 0
-  body: {fileID: 5109591317935693370}
 --- !u!1 &5109591317935693370
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +319,7 @@ GameObject:
   - component: {fileID: 4885998088001990527}
   - component: {fileID: 4116346569201541557}
   - component: {fileID: 5639595162928144430}
+  - component: {fileID: 4252463723665079957}
   m_Layer: 7
   m_Name: beprotis_0
   m_TagString: Untagged
@@ -792,6 +776,22 @@ PolygonCollider2D:
       - {x: -0.10371226, y: 7.432656}
       - {x: -0.13797008, y: 7.4497848}
   m_UseDelaunayMesh: 0
+--- !u!114 &4252463723665079957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5109591317935693370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5bba0bcc174b154295a299b56cd2584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expandDuration: 2
+  xScaleModifier: 0.05
+  yScaleModifier: 0.02
+  adjustY: 1
 --- !u!1 &7954492187638553574
 GameObject:
   m_ObjectHideFlags: 0

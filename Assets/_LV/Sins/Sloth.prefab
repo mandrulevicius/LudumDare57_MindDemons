@@ -143,8 +143,8 @@ GameObject:
   - component: {fileID: 6372073373391142416}
   - component: {fileID: 1662184107499959890}
   - component: {fileID: 1510079543843816117}
-  - component: {fileID: 1757659815997003704}
   - component: {fileID: 2475599195217419465}
+  - component: {fileID: 7480138684957397528}
   m_Layer: 11
   m_Name: Sloth
   m_TagString: Untagged
@@ -195,7 +195,7 @@ MonoBehaviour:
     rangedDamage: 10
     armor: 0
     attackSpeed: 0
-    explosionSize: 0
+    explosionSize: 3
   rb: {fileID: 0}
   explosionPrefab: {fileID: 5460664913994178735, guid: db925648426faea439a2a03d2fc50d19, type: 3}
   movementTarget: {fileID: 0}
@@ -373,23 +373,6 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &1757659815997003704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 983602403620813200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5bba0bcc174b154295a299b56cd2584, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  expandDuration: 2
-  xScaleModifier: 0.05
-  yScaleModifier: 0.02
-  adjustY: 1
-  body: {fileID: 3297165312248498830}
 --- !u!114 &2475599195217419465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,6 +388,33 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 4fe5e3a3d4a1c114aae6d99904d80851, type: 3}
   healthBar: {fileID: 2859228322885004169}
   body: {fileID: 3297165312248498830}
+--- !u!50 &7480138684957397528
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983602403620813200}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2859228322885004169
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,6 +513,7 @@ GameObject:
   - component: {fileID: 4840240818225287279}
   - component: {fileID: 529784635188415886}
   - component: {fileID: 3741128324886739078}
+  - component: {fileID: 63394582838925044}
   m_Layer: 11
   m_Name: tingumas_0
   m_TagString: Untagged
@@ -839,6 +850,22 @@ PolygonCollider2D:
       - {x: 1.004385, y: -5.181665}
       - {x: 1.004385, y: -3.276484}
   m_UseDelaunayMesh: 0
+--- !u!114 &63394582838925044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3297165312248498830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5bba0bcc174b154295a299b56cd2584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expandDuration: 2
+  xScaleModifier: 0.05
+  yScaleModifier: 0.02
+  adjustY: 1
 --- !u!1001 &7015422475140144155
 PrefabInstance:
   m_ObjectHideFlags: 0

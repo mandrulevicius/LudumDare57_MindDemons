@@ -60,6 +60,7 @@ MonoBehaviour:
     rangedDamage: 0
     armor: 0
     attackSpeed: 0
+    explosionSize: 0
   rb: {fileID: 0}
   explosionPrefab: {fileID: 0}
   movementTarget: {fileID: 0}
@@ -131,7 +132,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9087577266532155448, guid: 1fc6932be7b0eb54e8a86cf2e8248fc9, type: 3}
-  m_Color: {r: 0.7222239, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.5169811, g: 0.4790515, b: 0.15119252, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

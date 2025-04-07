@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 387556296489986805}
   - component: {fileID: 5502783010887349198}
   - component: {fileID: 258495049956410719}
+  - component: {fileID: 2049359566274108821}
   m_Layer: 11
   m_Name: rustumas2_0
   m_TagString: Untagged
@@ -598,6 +599,22 @@ PolygonCollider2D:
       - {x: -0.305, y: 3.54}
       - {x: -0.33499998, y: 3.52}
   m_UseDelaunayMesh: 0
+--- !u!114 &2049359566274108821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3567243224345982462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5bba0bcc174b154295a299b56cd2584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expandDuration: 2
+  xScaleModifier: 0.1
+  yScaleModifier: 0.05
+  adjustY: 1
 --- !u!1 &3570027914256169177
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,7 +717,6 @@ GameObject:
   - component: {fileID: 8856432041254565330}
   - component: {fileID: 7955081203209651525}
   - component: {fileID: 132318629562789294}
-  - component: {fileID: 1755499822670919337}
   - component: {fileID: 7277097918834561752}
   m_Layer: 11
   m_Name: Wrath
@@ -788,6 +804,7 @@ MonoBehaviour:
     rangedDamage: 10
     armor: 0
     attackSpeed: 0
+    explosionSize: 3
   rb: {fileID: 0}
   explosionPrefab: {fileID: 5460664913994178735, guid: db925648426faea439a2a03d2fc50d19, type: 3}
   movementTarget: {fileID: 0}
@@ -949,23 +966,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83bbd6bde9db155448d607eb22bb4708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1755499822670919337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9201662480190868281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5bba0bcc174b154295a299b56cd2584, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  expandDuration: 2
-  xScaleModifier: 0.1
-  yScaleModifier: 0.05
-  adjustY: 1
-  body: {fileID: 3567243224345982462}
 --- !u!114 &7277097918834561752
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,4 +1,3 @@
-using System;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -13,7 +12,7 @@ public class Breathing : MonoBehaviour
     [ReadOnly] private Vector3 breatheIn = Vector3.one;
     [ReadOnly] private Vector3 breatheOut = Vector3.one;
     private bool breathingIn;
-    
+
     private Vector3 startScale;
     private Vector3 targetScale;
 
@@ -22,41 +21,39 @@ public class Breathing : MonoBehaviour
 
     private Vector3 startPos;
     private Vector3 targetPos;
-    
+
     public bool adjustY = false;
-    
-    public GameObject body;
-    
+
     private Renderer objectRenderer;
     private bool isVisible = false;
 
-
     private void Awake()
     {
-        if (!body) return;
-        breatheIn = body.transform.localScale;
-        breatheOut = body.transform.localScale;
-        
+        objectRenderer = GetComponent<Renderer>();
+
+        breatheIn = transform.localScale;
+        breatheOut = transform.localScale;
+
         breatheIn.x -= xScaleModifier * breatheIn.x;
         breatheIn.y += yScaleModifier * breatheIn.y;
         breatheOut.x += xScaleModifier * breatheOut.x;
         breatheOut.y -= yScaleModifier * breatheOut.y;
-        
-        body.transform.localScale = breatheOut;
+
+        transform.localScale = breatheOut;
         startScale = breatheOut;
         targetScale = breatheIn;
 
-        if (!body || !adjustY) return;
-        breatheInPos = body.transform.localPosition;
+        if (!adjustY) return;
+        breatheInPos = transform.localPosition;
         breatheInPos.y += breatheIn.y / 10;
-        breatheOutPos = body.transform.localPosition;
+        breatheOutPos = transform.localPosition;
         breatheOutPos.y -= breatheOut.y / 10;
-        
-        body.transform.localPosition = breatheOutPos;
+
+        transform.localPosition = breatheOutPos;
         startPos = breatheOutPos;
         targetPos = breatheInPos;
     }
-    
+
     private void OnBecameVisible()
     {
         isVisible = true;
@@ -67,19 +64,24 @@ public class Breathing : MonoBehaviour
         isVisible = false;
     }
 
-
     private void FixedUpdate()
     {
-        if (!body || !isVisible) return;
+        if (!isVisible) return;
+
         currentTime += Time.fixedDeltaTime;
-        body.transform.localScale = Vector3.Lerp(startScale, targetScale, currentTime / expandDuration);
-        if (adjustY && body) body.transform.localPosition = Vector3.Lerp(startPos, targetPos, currentTime / expandDuration);
+        transform.localScale = Vector3.Lerp(startScale, targetScale, currentTime / expandDuration);
+
+        if (adjustY)
+            transform.localPosition = Vector3.Lerp(startPos, targetPos, currentTime / expandDuration);
+
         if (!(currentTime >= expandDuration)) return;
+
         currentTime = 0f;
         breathingIn = !breathingIn;
         startScale = targetScale;
         targetScale = breathingIn ? breatheIn : breatheOut;
-        if (!adjustY || !body) return;
+
+        if (!adjustY) return;
         startPos = targetPos;
         targetPos = breathingIn ? breatheInPos : breatheOutPos;
     }
