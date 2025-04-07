@@ -27,11 +27,17 @@ public class Boss : MonoBehaviour
         var sinsContainer = GameObject.FindWithTag("SinsContainer");
         var sinsPlaces = GameObject.FindWithTag("SinPlaces");
         var player = GameObject.FindWithTag("Player");
+        var BattleWalls = GameObject.FindWithTag("BossWalls");
         var bossEntity = gameObject.GetComponent<Entity>();
-        bossEntity.movementTarget = player;
+        bossEntity.movementTarget = player; 
+        bossEntity.inCombat = true;
         eventer.audioClip = bossBattleSound;
         eventer.PlayNewAudio();
         eventer.changeBossBattle();    
+        for (int i = 0; i < BattleWalls.transform.childCount; i++)
+        {
+            BattleWalls.transform.GetChild(i).gameObject.active=true;
+        }   
         var sins = new List<GameObject>();
         for (int i = 0; i < sinsContainer.transform.childCount; i++)
         {
