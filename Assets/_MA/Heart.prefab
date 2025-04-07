@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3722814301261352810}
   m_Layer: 11
   m_Name: Heart
-  m_TagString: Bullet
+  m_TagString: Heart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
   stats:
     id: 
     name: 
-    maxHealth: 10
+    maxHealth: 100
     health: 1
     velocity: {x: 0, y: 0}
     speed: 2

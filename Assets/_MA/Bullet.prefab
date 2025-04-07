@@ -51,7 +51,7 @@ MonoBehaviour:
   stats:
     id: 
     name: 
-    maxHealth: 1
+    maxHealth: 50
     health: 1
     velocity: {x: 0, y: 0}
     speed: 1

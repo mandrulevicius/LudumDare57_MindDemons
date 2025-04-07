@@ -10,6 +10,7 @@ TagManager:
   - HealthBar
   - SinsContainer
   - SinPlaces
+  - Heart
   layers:
   - Default
   - TransparentFX
