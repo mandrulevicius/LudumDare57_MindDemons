@@ -45,7 +45,7 @@ public class Entity : MonoBehaviour
 
     float _speedPerTick;
 
-    [ReadOnly] public bool inCombat;
+    public bool inCombat;
     [ReadOnly] public bool isShooting;
     
     
@@ -146,6 +146,7 @@ public class Entity : MonoBehaviour
 
     public void ApplyDamage(float damage)
     {
+        if (!inCombat) return;
         var hitSound = GetComponent<AudioSource>();
         if (hitSound) GetComponent<AudioSource>().Play();
         // apply hit effect - hit effect should have sound on damage, particles, show damage numbers, etc.

@@ -55,17 +55,22 @@ MonoBehaviour:
     health: 1
     velocity: {x: 0, y: 0}
     speed: 1
+    speedBoostMultiplier: 0
     touchDamage: 0
     rangedDamage: 0
+    armor: 0
+    attackSpeed: 0
   rb: {fileID: 0}
   explosionPrefab: {fileID: 5460664913994178735, guid: db925648426faea439a2a03d2fc50d19, type: 3}
   movementTarget: {fileID: 0}
   movementTargetPosition: {x: 0, y: 0}
   moveDirectionVector: {x: 0, y: 0}
+  lookTarget: {fileID: 0}
+  lookTargetPosition: {x: 0, y: 0}
   lookDirectionVector: {x: 0, y: 0}
   isSprinting: 0
   isDashing: 0
-  inCombat: 0
+  inCombat: 1
   isShooting: 0
 --- !u!212 &3403042726705995558
 SpriteRenderer:

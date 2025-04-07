@@ -139,13 +139,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2337970157944698540}
   - component: {fileID: 5412995221221943584}
-  - component: {fileID: 2475599195217419465}
   - component: {fileID: 9079000272621823399}
   - component: {fileID: 647661199357724539}
   - component: {fileID: 6372073373391142416}
   - component: {fileID: 1662184107499959890}
   - component: {fileID: 1510079543843816117}
   - component: {fileID: 1757659815997003704}
+  - component: {fileID: 2475599195217419465}
   m_Layer: 11
   m_Name: Sloth
   m_TagString: Untagged
@@ -195,6 +195,8 @@ MonoBehaviour:
     speedBoostMultiplier: 0
     touchDamage: 10
     rangedDamage: 10
+    armor: 0
+    attackSpeed: 0
   rb: {fileID: 0}
   explosionPrefab: {fileID: 5460664913994178735, guid: db925648426faea439a2a03d2fc50d19, type: 3}
   movementTarget: {fileID: 0}
@@ -207,19 +209,6 @@ MonoBehaviour:
   isDashing: 0
   inCombat: 0
   isShooting: 0
---- !u!114 &2475599195217419465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 983602403620813200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b58b32119e94a8d458ddea3c22d938cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
 --- !u!50 &9079000272621823399
 Rigidbody2D:
   serializedVersion: 5
@@ -228,7 +217,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983602403620813200}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -257,8 +246,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4e57a75b54ecf1242b776008a3a5b2d0, type: 3}
-  m_Resource: {fileID: 8300000, guid: 4e57a75b54ecf1242b776008a3a5b2d0, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -428,6 +417,21 @@ MonoBehaviour:
   xScaleModifier: 0.05
   yScaleModifier: 0.02
   adjustY: 1
+--- !u!114 &2475599195217419465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983602403620813200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58b32119e94a8d458ddea3c22d938cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 4fe5e3a3d4a1c114aae6d99904d80851, type: 3}
+  healthBar: {fileID: 2403282345339914965}
+  body: {fileID: 3297165312248498830}
 --- !u!1 &2403282345339914965
 GameObject:
   m_ObjectHideFlags: 0
