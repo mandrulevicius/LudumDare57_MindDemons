@@ -20,7 +20,7 @@ public class BossInteractions : MonoBehaviour
         ),
         new DialogueLine(
             "<b><color=#e89b2d>Bad You:</color></b>",
-            "Let's see how well you prepared"
+            "Let's see how well you prepared, you won't be able to run away now"
         )
     };
 
