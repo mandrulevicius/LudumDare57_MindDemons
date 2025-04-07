@@ -72,14 +72,12 @@ public class Player : MonoBehaviour
     // =========================== UPDATES ============================
     void FixedUpdate()
     {
+        tick++;
         float angle = Mathf.Atan2(playerEntity.lookDirectionVector.y, playerEntity.lookDirectionVector.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle - 90f);
         
-        
         eventer.mentalSlider.value = playerEntity.stats.health/playerEntity.stats.maxHealth;
         
-        
-        tick++;
         if (tick <= 50) return;
         wasHit = false;
         tick = 0;
