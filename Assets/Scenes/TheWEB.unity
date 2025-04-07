@@ -4261,6 +4261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eff52ead0f648f48bc6bbd54b14a08b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 721122547}
   npc: {fileID: 0}
   talkingObject: {fileID: 1505928574}
   picture: {fileID: 1284266822}
@@ -10215,6 +10216,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6222006361502213131}
     m_Modifications:
+    - target: {fileID: 4110229621067930505, guid: a5e409b5cf94b0e4e9bbd83a785d2b66, type: 3}
+      propertyPath: lookTarget
+      value: 
+      objectReference: {fileID: 721122547}
     - target: {fileID: 4110229621067930505, guid: a5e409b5cf94b0e4e9bbd83a785d2b66, type: 3}
       propertyPath: movementTarget
       value: 

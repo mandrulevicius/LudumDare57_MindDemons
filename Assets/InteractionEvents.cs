@@ -8,6 +8,7 @@ using Image = UnityEngine.UI.Image;
 
 public class InteractionEvents : MonoBehaviour
 {
+    public GameObject player;
     public GameObject npc;
     [SerializeField] private GameObject talkingObject;
     [SerializeField] private Image picture;
@@ -93,10 +94,15 @@ public class InteractionEvents : MonoBehaviour
     {
         Time.timeScale = 1;
         talkingObject.active = false;
-        if (npc.GetComponent<Entity>())
+        var npcEntity = npc.GetComponent<Entity>();
+        if (npcEntity)
         {
-            npc.GetComponent<Entity>().inCombat = !agreed;
-            npc.GetComponent<Entity>().isShooting = !agreed;
+            npcEntity.inCombat = !agreed;
+            npcEntity.isShooting = !agreed;
+            if (!agreed)
+            {
+                npcEntity.movementTarget = player;
+            }
         }
 
         npc = null;

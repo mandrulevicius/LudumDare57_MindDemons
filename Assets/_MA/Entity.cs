@@ -109,7 +109,7 @@ public class Entity : MonoBehaviour
         if (lookTarget) lookTargetPosition = lookTarget.transform.position;
         if (lookTargetPosition != Vector2.zero) lookDirectionVector = lookTargetPosition - (Vector2) transform.position;
         
-        if (movementTarget && inCombat) movementTargetPosition = movementTarget.transform.position;
+        if (movementTarget) movementTargetPosition = movementTarget.transform.position;
         if (movementTargetPosition != Vector2.zero) moveDirectionVector = (movementTargetPosition - (Vector2)transform.position).normalized;
 
         if (moveDirectionVector != Vector2.zero) CalcSpeed();
