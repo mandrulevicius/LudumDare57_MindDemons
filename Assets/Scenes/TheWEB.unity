@@ -1170,6 +1170,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlothBody
       objectReference: {fileID: 0}
+    - target: {fileID: 3741128324886739078, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 3072
+      objectReference: {fileID: 0}
     - target: {fileID: 4029702024242362408, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -4791,6 +4795,7 @@ MonoBehaviour:
   genericAudioSource: {fileID: 912884108}
   genericClip: {fileID: 8300000, guid: 7d1bb6906cbc2fd4691ebde353c56cbd, type: 3}
   fadeDuration: 1.5
+  bossBattleOn: 0
 --- !u!4 &912884106
 Transform:
   m_ObjectHideFlags: 0

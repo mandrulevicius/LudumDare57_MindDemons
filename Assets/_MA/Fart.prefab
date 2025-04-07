@@ -58,6 +58,8 @@ MonoBehaviour:
     speedBoostMultiplier: 0
     touchDamage: 1
     rangedDamage: 0
+    armor: 0
+    attackSpeed: 0
   rb: {fileID: 0}
   explosionPrefab: {fileID: 0}
   movementTarget: {fileID: 0}
@@ -155,7 +157,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 3072
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
