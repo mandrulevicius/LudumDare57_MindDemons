@@ -832,11 +832,11 @@ PrefabInstance:
     - target: {fileID: 647661199357724539, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: a8c692e45a715be4ea67fca489c3e44f, type: 3}
     - target: {fileID: 647661199357724539, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: a8c692e45a715be4ea67fca489c3e44f, type: 3}
     - target: {fileID: 680318893990234026, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -850,7 +850,7 @@ PrefabInstance:
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1087438085866474168, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 17d7b8cbc2ef0094e9cff982ebc12ff9, type: 2}
     - target: {fileID: 1330134685612322333, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
@@ -7115,7 +7115,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2668763849901317478, guid: 2ab3e9b7ac68ec84795f746eb863e0f1, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 493aecf068c6c1d4d9a79dcb17ecb946, type: 2}
     - target: {fileID: 3758964441367737672, guid: 2ab3e9b7ac68ec84795f746eb863e0f1, type: 3}
@@ -8206,11 +8206,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9733876c12f0c3641bdf2faf1ba954ca, type: 3}
---- !u!1 &2026660998 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3297165312248498830, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
-  m_PrefabInstance: {fileID: 147247806}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2025630859
 GameObject:
   m_ObjectHideFlags: 0
@@ -8289,6 +8284,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 8.58}
   m_EdgeRadius: 0
+--- !u!1 &2026660998 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3297165312248498830, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
+  m_PrefabInstance: {fileID: 147247806}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2040502918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10342,7 +10342,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 6222006361502213131}
     m_Modifications:
     - target: {fileID: 3649526723738181894, guid: a5e409b5cf94b0e4e9bbd83a785d2b66, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 17d7b8cbc2ef0094e9cff982ebc12ff9, type: 2}
     - target: {fileID: 4110229621067930505, guid: a5e409b5cf94b0e4e9bbd83a785d2b66, type: 3}
@@ -10425,6 +10425,14 @@ PrefabInstance:
       propertyPath: targetScript
       value: 
       objectReference: {fileID: 5133877165317448684}
+    - target: {fileID: 8856432041254565330, guid: a5e409b5cf94b0e4e9bbd83a785d2b66, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 98290d8e88ee1ec4d89d2e305c559397, type: 3}
+    - target: {fileID: 8856432041254565330, guid: a5e409b5cf94b0e4e9bbd83a785d2b66, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 98290d8e88ee1ec4d89d2e305c559397, type: 3}
     - target: {fileID: 9201662480190868281, guid: a5e409b5cf94b0e4e9bbd83a785d2b66, type: 3}
       propertyPath: m_Name
       value: Gluttony
@@ -12197,7 +12205,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2668763849901317478, guid: 2ab3e9b7ac68ec84795f746eb863e0f1, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 493aecf068c6c1d4d9a79dcb17ecb946, type: 2}
     - target: {fileID: 3758964441367737672, guid: 2ab3e9b7ac68ec84795f746eb863e0f1, type: 3}

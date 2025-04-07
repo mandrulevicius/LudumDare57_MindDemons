@@ -920,6 +920,8 @@ MonoBehaviour:
     speedBoostMultiplier: 0
     touchDamage: 10
     rangedDamage: 10
+    armor: 0
+    attackSpeed: 0
   rb: {fileID: 0}
   explosionPrefab: {fileID: 5460664913994178735, guid: db925648426faea439a2a03d2fc50d19, type: 3}
   movementTarget: {fileID: 0}
@@ -969,8 +971,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 98290d8e88ee1ec4d89d2e305c559397, type: 3}
+  m_Resource: {fileID: 8300000, guid: 98290d8e88ee1ec4d89d2e305c559397, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1111,3 +1113,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 0}
   healthBar: {fileID: 0}
+  body: {fileID: 0}
