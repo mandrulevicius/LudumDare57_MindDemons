@@ -8,6 +8,8 @@ TagManager:
   - Events
   - Audio
   - HealthBar
+  - SinsContainer
+  - SinPlaces
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Player
   - Enemy
   - Npc
-  - 
+  - Boss
   - Sin
   - 
   - 
