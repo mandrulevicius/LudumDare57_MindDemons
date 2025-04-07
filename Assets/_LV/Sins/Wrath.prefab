@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 387556296489986805}
   - component: {fileID: 5502783010887349198}
   - component: {fileID: 258495049956410719}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rustumas2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

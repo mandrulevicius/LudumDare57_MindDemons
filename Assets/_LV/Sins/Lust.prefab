@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7128439492952427916}
   - component: {fileID: 2022186455822285122}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: HealthBar
   m_TagString: HealthBar
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 251085738805303253}
   - component: {fileID: 9034176607511222904}
   - component: {fileID: 6387083366043892839}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: gaslumas_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

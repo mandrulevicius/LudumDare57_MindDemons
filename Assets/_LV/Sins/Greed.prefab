@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 520742444661195019}
   - component: {fileID: 3461923225607698742}
   - component: {fileID: 7698822576716495167}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: godumas_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +523,7 @@ GameObject:
   - component: {fileID: 5940620493754746676}
   - component: {fileID: 2680222484289154813}
   - component: {fileID: 5581001524255538732}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ProjectedAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
