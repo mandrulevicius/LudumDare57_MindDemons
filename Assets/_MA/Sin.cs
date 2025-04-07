@@ -20,6 +20,8 @@ public class Sin : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (!gameObject.scene.isLoaded) return;
+
         GameObject.FindWithTag("Events").GetComponent<InteractionEvents>().PlayGenericClip();
     }
 

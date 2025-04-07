@@ -66,6 +66,7 @@ public class SimpleRoom : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         if(!other.gameObject.CompareTag("Player")) return;
+        if (!gameObject.scene.isLoaded) return;
         var eventer = GameObject.FindWithTag("Events").GetComponent<InteractionEvents>();
         eventer.npc=null;
         eventer.onnpcChanged();
