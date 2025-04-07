@@ -1025,3 +1025,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 0}
   healthBar: {fileID: 5275267837264032472}
+  body: {fileID: 1308550103268338880}
