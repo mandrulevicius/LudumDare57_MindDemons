@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3889137639512812976}
   - component: {fileID: 2875450361217445625}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Audio
   m_TagString: Audio
   m_Icon: {fileID: 0}
@@ -531,7 +531,7 @@ GameObject:
   - component: {fileID: 4840240818225287279}
   - component: {fileID: 529784635188415886}
   - component: {fileID: 3741128324886739078}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: tingumas_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -877,7 +877,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6218867992905904208}
   - component: {fileID: 2896645277838729642}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SlothBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}

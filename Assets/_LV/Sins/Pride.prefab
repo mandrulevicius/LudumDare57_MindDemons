@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6525702008227309504}
   - component: {fileID: 4700696161444559714}
   - component: {fileID: 2669074461694611751}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: puikybe_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
