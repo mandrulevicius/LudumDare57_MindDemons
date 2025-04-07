@@ -1008,9 +1008,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   expandDuration: 2
-  xScaleModifier: 0.05
-  yScaleModifier: 0.02
-  adjustY: 0
+  xScaleModifier: 0.2
+  yScaleModifier: 0.1
+  adjustY: 1
   body: {fileID: 1308550103268338880}
 --- !u!114 &7277097918834561752
 MonoBehaviour:

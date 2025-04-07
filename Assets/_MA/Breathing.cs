@@ -42,12 +42,12 @@ public class Breathing : MonoBehaviour
         targetScale = breatheIn;
 
         if (!body) return;
-        breatheInPos = body.transform.position;
+        breatheInPos = body.transform.localPosition;
         breatheInPos.y += breatheIn.y / 10;
-        breatheOutPos = body.transform.position;
+        breatheOutPos = body.transform.localPosition;
         breatheOutPos.y -= breatheOut.y / 10;
         
-        body.transform.position = breatheOutPos;
+        body.transform.localPosition = breatheOutPos;
         startPos = breatheOutPos;
         targetPos = breatheInPos;
     }
@@ -56,7 +56,7 @@ public class Breathing : MonoBehaviour
     {
         currentTime += Time.fixedDeltaTime;
         transform.localScale = Vector3.Lerp(startScale, targetScale, currentTime / expandDuration);
-        if (adjustY && body) body.transform.position = Vector3.Lerp(startPos, targetPos, currentTime / expandDuration);
+        if (adjustY && body) body.transform.localPosition = Vector3.Lerp(startPos, targetPos, currentTime / expandDuration);
         if (!(currentTime >= expandDuration)) return;
         currentTime = 0f;
         breathingIn = !breathingIn;
