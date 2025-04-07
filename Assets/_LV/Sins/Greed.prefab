@@ -522,6 +522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5940620493754746676}
   - component: {fileID: 2680222484289154813}
+  - component: {fileID: 5581001524255538732}
   m_Layer: 0
   m_Name: ProjectedAttack
   m_TagString: Untagged
@@ -558,6 +559,103 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectedPrefab: {fileID: 779251430647916040, guid: 4863e6b72f732ed408faf874b67445b8, type: 3}
   fireRate: 3
+--- !u!82 &5581001524255538732
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9084399729906784248}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b161f3047239c924aa4a2bc8e747c81a, type: 3}
+  m_Resource: {fileID: 8300000, guid: b161f3047239c924aa4a2bc8e747c81a, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &9201662480190868281
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,10 +670,10 @@ GameObject:
   - component: {fileID: 1147218116528609038}
   - component: {fileID: 8856432041254565330}
   - component: {fileID: 7955081203209651525}
-  - component: {fileID: 132318629562789294}
   - component: {fileID: 1755499822670919337}
   - component: {fileID: 7277097918834561752}
   - component: {fileID: 7750558785526491674}
+  - component: {fileID: -2042339617329058693}
   m_Layer: 11
   m_Name: Greed
   m_TagString: Untagged
@@ -710,8 +808,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a8c692e45a715be4ea67fca489c3e44f, type: 3}
-  m_Resource: {fileID: 8300000, guid: a8c692e45a715be4ea67fca489c3e44f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b9dd2869b65bfe541b95e8bf9f5a9538, type: 3}
+  m_Resource: {fileID: 8300000, guid: b9dd2869b65bfe541b95e8bf9f5a9538, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -809,19 +907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8f096aaa7681747b3cd4e091440cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScript: {fileID: 132318629562789294}
---- !u!114 &132318629562789294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9201662480190868281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83bbd6bde9db155448d607eb22bb4708, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  targetScript: {fileID: -2042339617329058693}
 --- !u!114 &1755499822670919337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -868,3 +954,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectedPrefab: {fileID: 779251430647916040, guid: 4863e6b72f732ed408faf874b67445b8, type: 3}
   fireRate: 2
+--- !u!114 &-2042339617329058693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9201662480190868281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dd78fee20f0e448aef36ad59902e92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
