@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 251085738805303253}
   - component: {fileID: 9034176607511222904}
-  - component: {fileID: 5639768045237214848}
+  - component: {fileID: 6387083366043892839}
   m_Layer: 0
   m_Name: gaslumas_0
   m_TagString: Untagged
@@ -175,7 +175,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &5639768045237214848
+--- !u!60 &6387083366043892839
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,7 +191,7 @@ PolygonCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

@@ -1,20 +1,28 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
-    AudioClip bossBattleSound;
+    public AudioClip bossBattleSound;
     private GameObject SinsConatiner;
     private GameObject SinsPlaces;
     private GameObject player;
+    private InteractionEvents eventer;
 
+    private void Awake()
+    {
+        eventer = GameObject.FindWithTag("Events").GetComponent<InteractionEvents>();
+    }
 
     public void StartBattle()
     {
         var sinsContainer = GameObject.FindWithTag("SinsContainer");
         var sinsPlaces = GameObject.FindWithTag("SinPlaces");
         var player = GameObject.FindWithTag("Player");
+        eventer.audioClip = bossBattleSound;
+        eventer.PlayNewAudio();
 
         var sins = new List<GameObject>();
         for (int i = 0; i < sinsContainer.transform.childCount; i++)
