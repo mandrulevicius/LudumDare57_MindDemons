@@ -74,7 +74,7 @@ MonoBehaviour:
     health: 100
     velocity: {x: 0, y: 0}
     speed: 5
-    speedBoostMultiplier: 5
+    speedBoostMultiplier: 2
     touchDamage: 0
     rangedDamage: 10
     armor: 0

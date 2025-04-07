@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
     [UsedImplicitly]
     void OnSprint(InputValue value)
     {
-        _playerEntity.isSprinting = value.isPressed;
+        // _playerEntity.isSprinting = value.isPressed;
     }
 
     [UsedImplicitly]
