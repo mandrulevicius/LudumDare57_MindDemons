@@ -28,7 +28,8 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("Bullet")) return;
         
         if (other.gameObject.layer != LayerMask.NameToLayer("Enemy") &&
-            other.gameObject.layer != LayerMask.NameToLayer("Sin")) return;
+            other.gameObject.layer != LayerMask.NameToLayer("Sin")&&
+            other.gameObject.layer != LayerMask.NameToLayer("Boss")) return;
         Entity otherEntity = other.gameObject.GetComponent<Entity>();
         if (!otherEntity) otherEntity = other.gameObject.GetComponentInParent<Entity>();
         if (!otherEntity.inCombat) return;
@@ -39,7 +40,8 @@ public class Player : MonoBehaviour
     private void OnCollisionStay2D(Collision2D other)
     {
         if (other.gameObject.layer != LayerMask.NameToLayer("Enemy") &&
-            other.gameObject.layer != LayerMask.NameToLayer("Sin")) return;
+            other.gameObject.layer != LayerMask.NameToLayer("Sin")&&
+            other.gameObject.layer != LayerMask.NameToLayer("Boss")) return;
         if (tick != 0 && wasHit) return;
         wasHit = true;
         tick++;
