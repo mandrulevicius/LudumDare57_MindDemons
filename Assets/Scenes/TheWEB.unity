@@ -4269,6 +4269,7 @@ MonoBehaviour:
   mentalSlider: {fileID: 1223384274}
   audioSource: {fileID: 912884107}
   audioClip: {fileID: 0}
+  endOfBattleAudio: {fileID: 0}
   genericAudioSource: {fileID: 912884108}
   genericClip: {fileID: 8300000, guid: 7d1bb6906cbc2fd4691ebde353c56cbd, type: 3}
   fadeDuration: 1.5
@@ -4302,7 +4303,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

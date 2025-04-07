@@ -13,10 +13,19 @@ public class SimpleRoom : MonoBehaviour
         GameObject[] enemiesInTrigger = FindOthersInTrigger("Enemy");
         GameObject[] sinsInTrigger = FindOthersInTrigger("Sin");
         GameObject[] npcInTrigger = FindOthersInTrigger("Npc");
+        
+        var once = 0;
         foreach (GameObject enemy in enemiesInTrigger)
         {
             enemy.GetComponent<Entity>().movementTarget = other.gameObject;
-        }  
+            if(enemy.GetComponent<EvilThought>().audioClip && once==0)
+            eventer.audioClip = enemy.GetComponent<EvilThought>().audioClip;
+            if(enemy.GetComponent<EvilThought>().EndOfBattleAudioClip && once==0)
+            eventer.endOfBattleAudio = enemy.GetComponent<EvilThought>().EndOfBattleAudioClip;
+            eventer.PlayNewAudio();
+            once++;
+        }
+    once = 0;
         foreach (GameObject sin in sinsInTrigger)
         {
             eventer.npc = sin;
