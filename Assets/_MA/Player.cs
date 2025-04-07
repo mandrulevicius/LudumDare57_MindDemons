@@ -13,8 +13,9 @@ public class Player : MonoBehaviour
     // ============================= INIT =============================
     void Awake()
     {
-        eventer = GameObject.FindWithTag("Events").GetComponent<InteractionEvents>();
         playerEntity = GetComponent<Entity>();
+        eventer = GameObject.FindWithTag("Events").GetComponent<InteractionEvents>();
+        
     }
 
     // =========================== TRIGGERS ===========================

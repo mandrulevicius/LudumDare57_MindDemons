@@ -14,4 +14,9 @@ public class Sin : MonoBehaviour
     {
         GameObject.FindWithTag("Events").GetComponent<InteractionEvents>().PlayGenericClip();
     }
+
+    private void FixedUpdate()
+    {
+        transform.rotation = Quaternion.Euler(0, entity.lookDirectionVector.x < 0 ? 180 : 0, 0);
+    }
 }
