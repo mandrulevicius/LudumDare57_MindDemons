@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1662184107499959890}
   - component: {fileID: 1510079543843816117}
   - component: {fileID: 2475599195217419465}
-  - component: {fileID: 7480138684957397528}
   m_Layer: 11
   m_Name: Sloth
   m_TagString: Untagged
@@ -258,33 +257,6 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 4fe5e3a3d4a1c114aae6d99904d80851, type: 3}
   healthBar: {fileID: 2859228322885004169}
   body: {fileID: 3297165312248498830}
---- !u!50 &7480138684957397528
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 983602403620813200}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &2859228322885004169
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,7 +770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4610650596172978432, guid: 3bab7d3b3dad9714e864de09109d8549, type: 3}
       propertyPath: shotForce
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4610650596172978432, guid: 3bab7d3b3dad9714e864de09109d8549, type: 3}
       propertyPath: bulletPrefab

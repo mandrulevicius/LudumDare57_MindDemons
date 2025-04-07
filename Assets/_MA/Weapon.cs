@@ -42,8 +42,9 @@ public class Weapon : MonoBehaviour
         bullet.GetComponent<Entity>().stats.touchDamage = parentEntity.stats.rangedDamage;
         Vector2 direction = parentEntity.lookDirectionVector;
         if (gameObject.name == "LustWeapon") bullet.GetComponent<Entity>().movementTarget = parentEntity.lookTarget;
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        else bullet.GetComponent<Entity>().movementTargetPosition = parentEntity.lookTargetPosition;
+        // Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         bullet.layer = gameObject.layer;
-        rb.linearVelocity = direction * shotForce + parentEntity.stats.velocity;
+        // rb.linearVelocity = direction * shotForce + parentEntity.stats.velocity;
     }
 }

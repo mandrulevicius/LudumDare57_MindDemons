@@ -66,6 +66,7 @@ public class Breathing : MonoBehaviour
 
     private void FixedUpdate()
     {
+        return;
         if (!isVisible) return;
 
         currentTime += Time.fixedDeltaTime;

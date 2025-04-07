@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
         if (other.gameObject.layer != LayerMask.NameToLayer("Enemy") &&
             other.gameObject.layer != LayerMask.NameToLayer("Sin")) return;
         Entity otherEntity = other.gameObject.GetComponent<Entity>();
+        if (!otherEntity) otherEntity = other.gameObject.GetComponentInParent<Entity>();
+        
         
         playerEntity.ApplyDamage(otherEntity.stats.touchDamage);
     }
@@ -42,6 +44,7 @@ public class Player : MonoBehaviour
         wasHit = true;
         tick++;
         Entity otherEntity = other.gameObject.GetComponent<Entity>();
+        if (!otherEntity) otherEntity = other.gameObject.GetComponentInParent<Entity>();
         playerEntity.ApplyDamage(otherEntity.stats.touchDamage);
     }
     
