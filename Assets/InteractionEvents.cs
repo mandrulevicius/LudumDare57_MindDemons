@@ -82,7 +82,7 @@ public class InteractionEvents : MonoBehaviour
             return;
         }
 
-        npc.GetComponent<TalkInteraction>().Interact(agree, npc.GetComponentInChildren<SpriteRenderer>().sprite);
+        npc.GetComponent<TalkInteraction>().Interact(agree, npc.GetComponent<Sin>().body.GetComponent<SpriteRenderer>().sprite);
     }
 
     public void StartTalk()

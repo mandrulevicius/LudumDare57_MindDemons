@@ -9,7 +9,7 @@ public class Sin : MonoBehaviour
     private float currentHealth;
     private float scalex;
     
-    [SerializeField] private GameObject body;
+    [SerializeField] public GameObject body;
     
     private void Awake()
     {
