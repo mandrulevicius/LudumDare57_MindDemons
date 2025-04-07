@@ -19,7 +19,7 @@ public class Boss : MonoBehaviour
     private void OnDestroy()
     {
         eventer.changeBossBattle();
-        eventer.PlayGenericClip();
+        eventer.won();
     }
 
     public void StartBattle()

@@ -5058,6 +5058,7 @@ MonoBehaviour:
   interactionTextBox: {fileID: 734130844431487164}
   mentalSlider: {fileID: 1223384274}
   audioSource: {fileID: 912884107}
+  finito: {fileID: 8300000, guid: efa9f93f422d0194b8324d21591875ee, type: 3}
   audioClip: {fileID: 0}
   endOfBattleAudio: {fileID: 0}
   genericAudioSource: {fileID: 912884108}
@@ -6654,7 +6655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8232709144583763134, guid: c176c87d40336344ba81734b31de19c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -48.383953
+      value: -49.633953
       objectReference: {fileID: 0}
     - target: {fileID: 8232709144583763134, guid: c176c87d40336344ba81734b31de19c6, type: 3}
       propertyPath: m_LocalPosition.z

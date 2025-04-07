@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     public bool hasDash;
     [SerializeField] private GameObject frontLight;
     
-    [SerializeField] private GameObject body;
+    public GameObject body;
     
     // ============================= INIT =============================
     void Awake()

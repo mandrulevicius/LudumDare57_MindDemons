@@ -16,6 +16,7 @@ public class CameraController : MonoBehaviour
     [UsedImplicitly]
     void OnScrollWheel(InputValue value)
     {
+        return;
         Vector2 scrollDelta = value.Get<Vector2>();
         if (scrollDelta.y == 0) return;
         if (scrollDelta.y > 0) _mainCamera.orthographicSize /= Mathf.Abs(scrollDelta.y) * 1.1f;
