@@ -115,7 +115,7 @@ public class Entity : MonoBehaviour
         UpdateEntity();
         
         if (lookTarget) lookTargetPosition = lookTarget.transform.position;
-        if (lookTargetPosition != Vector2.zero) lookDirectionVector = lookTargetPosition - (Vector2) transform.position;
+        if (lookTargetPosition != Vector2.zero) lookDirectionVector = (lookTargetPosition - (Vector2) transform.position).normalized;
         
         if (movementTarget) movementTargetPosition = movementTarget.transform.position;
         if (movementTargetPosition != Vector2.zero) moveDirectionVector = (movementTargetPosition - (Vector2)transform.position).normalized;
