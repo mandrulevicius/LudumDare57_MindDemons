@@ -54,7 +54,7 @@ MonoBehaviour:
     maxHealth: 50
     health: 1
     velocity: {x: 0, y: 0}
-    speed: 1
+    speed: 10
     speedBoostMultiplier: 0
     touchDamage: 0
     rangedDamage: 0
