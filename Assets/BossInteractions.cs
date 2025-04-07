@@ -52,17 +52,19 @@ public class BossInteractions : MonoBehaviour
     public void Talk(bool agreed)
     {
         
-        if ((agreed ? topicYes.Count : topic.Count) == dailogCounter)
+        if (!agreed && topic.Count == dailogCounter)
         {
             talkInteraction.resetTalk();
             dailogCounter = 0;
             eventer.StopTalk(agreed);
             return;
         }
-        else if(!agreed && topicYes.Count == dailogCounter)
+        if(agreed && topicYes.Count == dailogCounter)
         {            
             dailogCounter = topicYes.Count;
             bossEvents.StartBattle();
+            eventer.StopTalk(agreed);
+            return;
         }
         eventer.StartTalk();
         if (agreed)
