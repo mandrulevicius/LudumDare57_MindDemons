@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 2146380414722859313}
   - component: {fileID: 739098344359738782}
   - component: {fileID: 9117583967471155142}
+  - component: {fileID: 4190360692879422286}
   m_Layer: 8
   m_Name: BadThought
   m_TagString: Untagged
@@ -236,3 +237,17 @@ MonoBehaviour:
   xScaleModifier: 0.05
   yScaleModifier: 0.02
   adjustY: 0
+--- !u!114 &4190360692879422286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7282766787157104700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e389d73b7183c4c4b8aeeb37dcbb5c3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 66dd56b1c036e9a4aa4a98a5eb498911, type: 3}
+  endOfBattle: {fileID: 8300000, guid: f380224b5e9a989498245b9a391861c2, type: 3}

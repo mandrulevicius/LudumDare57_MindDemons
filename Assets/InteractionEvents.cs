@@ -16,6 +16,7 @@ public class InteractionEvents : MonoBehaviour
     [SerializeField] public Slider mentalSlider;
     [SerializeField] private AudioSource audioSource;
     public AudioClip audioClip;
+    public AudioClip endOfBattleAudio;
     [SerializeField] private AudioSource genericAudioSource;
     public AudioClip genericClip;
     public float fadeDuration = 1.5f;
@@ -35,8 +36,7 @@ public class InteractionEvents : MonoBehaviour
 
     public void PlayGenericClip()
     {
-        audioSource.clip = genericClip;
-        audioSource.Play();
+        StartCoroutine(CrossFadeRoutine(audioSource, genericAudioSource));
     }
 
     public void PlayNewAudio()
