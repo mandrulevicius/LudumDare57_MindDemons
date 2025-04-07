@@ -24,6 +24,8 @@ public class Breathing : MonoBehaviour
     private Vector3 targetPos;
     
     public bool adjustY = false;
+    
+    public GameObject body;
 
     private void Awake()
     {
@@ -38,13 +40,14 @@ public class Breathing : MonoBehaviour
         transform.localScale = breatheOut;
         startScale = breatheOut;
         targetScale = breatheIn;
-        
-        breatheInPos = transform.position;
+
+        if (!body) return;
+        breatheInPos = body.transform.position;
         breatheInPos.y += breatheIn.y / 10;
-        breatheOutPos = transform.position;
+        breatheOutPos = body.transform.position;
         breatheOutPos.y -= breatheOut.y / 10;
         
-        transform.position = breatheOutPos;
+        body.transform.position = breatheOutPos;
         startPos = breatheOutPos;
         targetPos = breatheInPos;
     }
@@ -53,13 +56,13 @@ public class Breathing : MonoBehaviour
     {
         currentTime += Time.fixedDeltaTime;
         transform.localScale = Vector3.Lerp(startScale, targetScale, currentTime / expandDuration);
-        if (adjustY) transform.position = Vector3.Lerp(startPos, targetPos, currentTime / expandDuration);
+        if (adjustY && body) body.transform.position = Vector3.Lerp(startPos, targetPos, currentTime / expandDuration);
         if (!(currentTime >= expandDuration)) return;
         currentTime = 0f;
         breathingIn = !breathingIn;
         startScale = targetScale;
         targetScale = breathingIn ? breatheIn : breatheOut;
-        if (!adjustY) return;
+        if (!adjustY || !body) return;
         startPos = targetPos;
         targetPos = breathingIn ? breatheInPos : breatheOutPos;
     }

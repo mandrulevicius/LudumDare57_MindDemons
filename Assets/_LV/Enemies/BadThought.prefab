@@ -146,6 +146,8 @@ MonoBehaviour:
     speedBoostMultiplier: 0
     touchDamage: 1
     rangedDamage: 0
+    armor: 0
+    attackSpeed: 0
   rb: {fileID: 0}
   explosionPrefab: {fileID: 5460664913994178735, guid: db925648426faea439a2a03d2fc50d19, type: 3}
   movementTarget: {fileID: 0}
@@ -237,6 +239,7 @@ MonoBehaviour:
   xScaleModifier: 0.05
   yScaleModifier: 0.02
   adjustY: 0
+  body: {fileID: 4676350002260150612}
 --- !u!114 &4190360692879422286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,4 +253,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 66dd56b1c036e9a4aa4a98a5eb498911, type: 3}
-  endOfBattle: {fileID: 8300000, guid: f380224b5e9a989498245b9a391861c2, type: 3}
+  EndOfBattleAudioClip: {fileID: 0}

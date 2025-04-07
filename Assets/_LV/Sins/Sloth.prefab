@@ -417,6 +417,7 @@ MonoBehaviour:
   xScaleModifier: 0.05
   yScaleModifier: 0.02
   adjustY: 1
+  body: {fileID: 3297165312248498830}
 --- !u!114 &2475599195217419465
 MonoBehaviour:
   m_ObjectHideFlags: 0
