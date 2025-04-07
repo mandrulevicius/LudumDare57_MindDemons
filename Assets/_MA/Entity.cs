@@ -68,6 +68,11 @@ public class Entity : MonoBehaviour
         {
             ApplyDamage(1);
         }
+
+        if (gameObject.CompareTag("Heart") && other.gameObject.CompareTag("Player"))
+        {
+            ApplyDamage(1);
+        }
         
         Entity otherEntity = other.gameObject.GetComponent<Entity>();
         
@@ -158,7 +163,7 @@ public class Entity : MonoBehaviour
         if (explosionPrefab)
         {
             GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-            explosion.GetComponent<Explosion>().endSize = transform.localScale.x * 1.5f;
+            explosion.GetComponent<Explosion>().endSize = stats.maxHealth / 100;
             explosion.GetComponent<Explosion>().lifetime = stats.maxHealth / 100;
         }
         Destroy(gameObject, 0.01f);
