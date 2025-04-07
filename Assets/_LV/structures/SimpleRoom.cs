@@ -18,6 +18,8 @@ public class SimpleRoom : MonoBehaviour
         var once = 0;
         foreach (GameObject enemy in enemiesInTrigger)
         {
+            if (enemy.transform.parent.name != "Enemies")
+                continue;
             enemy.GetComponent<Entity>().movementTarget = other.gameObject;
             enemy.GetComponent<Entity>().inCombat = true;
             if(enemy.GetComponent<EvilThought>().audioClip && once==0)
@@ -30,22 +32,32 @@ public class SimpleRoom : MonoBehaviour
     once = 0;
         foreach (GameObject sin in sinsInTrigger)
         {
+            if (sin.transform.parent.tag != "SinsContainer")
+                continue;
             eventer.npc = sin;
             eventer.onnpcChanged();
-            if(sin.GetComponent<Sin>().audioClip)
+            Debug.Log(sin.name);
+            var sinzer = sin.GetComponent<Sin>();
+            Debug.Log(sinzer);
+            Debug.Log(sinzer.audioClip);
+            if(sinzer.audioClip)
             {
-                eventer.audioClip = sin.GetComponent<Sin>().audioClip;
+                eventer.audioClip = sinzer.audioClip;
                 eventer.PlayNewAudio();
             }
 
         }
         foreach (GameObject npc in npcInTrigger)
         {
+            if (npc.transform.parent.name != "NPC")
+                continue;
             eventer.npc = npc;
             eventer.onnpcChanged();
         }
         foreach (GameObject npc in boss)
         {
+            if (npc.transform.parent.name != "BossArena")
+                continue;
             eventer.npc = npc;
             eventer.onnpcChanged();
         }
@@ -65,7 +77,7 @@ public class SimpleRoom : MonoBehaviour
         ContactFilter2D filter = new ContactFilter2D().NoFilter();
         GetComponent<Collider2D>().Overlap(filter, collidersList);
         Collider2D[] colliders = collidersList.ToArray();
-
+        
         // Filter for enemies
         return System.Array.FindAll(
             System.Array.ConvertAll(colliders, col => col.gameObject),
