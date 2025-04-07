@@ -390,12 +390,12 @@ MonoBehaviour:
   stats:
     id: 
     name: 
-    maxHealth: 100
-    health: 100
+    maxHealth: 200
+    health: 200
     velocity: {x: 0, y: 0}
-    speed: 1
+    speed: 2
     speedBoostMultiplier: 0
-    touchDamage: 10
+    touchDamage: 20
     rangedDamage: 10
     armor: 0
     attackSpeed: 0

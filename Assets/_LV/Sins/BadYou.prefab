@@ -568,6 +568,7 @@ GameObject:
   - component: {fileID: 3678025515382812820}
   - component: {fileID: 865130686858368755}
   - component: {fileID: 9033906618370856446}
+  - component: {fileID: 1691635670510866282}
   m_Layer: 10
   m_Name: BadYou
   m_TagString: Untagged
@@ -681,3 +682,40 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: c496af2c677776544830983e6fe86079, type: 3}
   healthBar: {fileID: 3303095018434662716}
   body: {fileID: 911879041164848382}
+--- !u!114 &1691635670510866282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3374214132740738665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a935291b7928d949ae65b8667d87d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats:
+    id: 
+    name: 
+    maxHealth: 100
+    health: 100
+    velocity: {x: 0, y: 0}
+    speed: 4
+    speedBoostMultiplier: 0
+    touchDamage: 10
+    rangedDamage: 0
+    armor: 0
+    attackSpeed: 0
+    explosionSize: 5
+  rb: {fileID: 0}
+  explosionPrefab: {fileID: 0}
+  movementTarget: {fileID: 0}
+  movementTargetPosition: {x: 0, y: 0}
+  moveDirectionVector: {x: 0, y: 0}
+  lookTarget: {fileID: 0}
+  lookTargetPosition: {x: 0, y: 0}
+  lookDirectionVector: {x: 0, y: 0}
+  isSprinting: 0
+  isDashing: 0
+  inCombat: 0
+  isShooting: 0
