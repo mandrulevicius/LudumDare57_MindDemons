@@ -66,8 +66,8 @@ public class Breathing : MonoBehaviour
 
     private void FixedUpdate()
     {
-        return;
-        if (!isVisible) return;
+        // return;
+        // if (!isVisible) return;
 
         currentTime += Time.fixedDeltaTime;
         transform.localScale = Vector3.Lerp(startScale, targetScale, currentTime / expandDuration);
