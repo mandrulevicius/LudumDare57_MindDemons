@@ -126,6 +126,7 @@ public class InteractionEvents : MonoBehaviour
         textBox.text = "From now on depths of my mind are pure.\n (Press r to reset || q to quit)";
         picture.sprite =  GameObject.FindWithTag("Player").GetComponent<Player>().body.GetComponent<SpriteRenderer>().sprite;
         GameObject.FindWithTag("Controller").GetComponent<PlayerController>().GameEnded = true;
+        Time.timeScale = 0;
     }
     public void forReset()
     {
