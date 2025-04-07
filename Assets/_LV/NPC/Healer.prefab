@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7851754983229306710}
   - component: {fileID: 8933939014379717339}
   - component: {fileID: 7525588541809259494}
+  - component: {fileID: 530804198462438820}
   m_Layer: 10
   m_Name: Healer
   m_TagString: Untagged
@@ -106,6 +107,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &530804198462438820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2897486075416639222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58b32119e94a8d458ddea3c22d938cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 0}
+  healthBar: {fileID: 0}
+  body: {fileID: 5245937277874549107}
 --- !u!1 &5245937277874549107
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +249,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 17.337887, y: 32.78}
+    oldSize: {x: 17.385475, y: 32.78}
     newSize: {x: 17.337887, y: 32.78}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

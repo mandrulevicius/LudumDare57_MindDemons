@@ -27,6 +27,8 @@ public class Boss : MonoBehaviour
         var sinsContainer = GameObject.FindWithTag("SinsContainer");
         var sinsPlaces = GameObject.FindWithTag("SinPlaces");
         var player = GameObject.FindWithTag("Player");
+        var bossEntity = gameObject.GetComponent<Entity>();
+        bossEntity.movementTarget = player;
         eventer.audioClip = bossBattleSound;
         eventer.PlayNewAudio();
         eventer.changeBossBattle();    
