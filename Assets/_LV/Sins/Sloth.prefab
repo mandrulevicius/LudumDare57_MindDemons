@@ -209,6 +209,19 @@ MonoBehaviour:
   isDashing: 0
   inCombat: 0
   isShooting: 0
+--- !u!114 &2475599195217419465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983602403620813200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58b32119e94a8d458ddea3c22d938cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 4fe5e3a3d4a1c114aae6d99904d80851, type: 3}
 --- !u!50 &9079000272621823399
 Rigidbody2D:
   serializedVersion: 5
@@ -417,21 +430,6 @@ MonoBehaviour:
   xScaleModifier: 0.05
   yScaleModifier: 0.02
   adjustY: 1
---- !u!114 &2475599195217419465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 983602403620813200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b58b32119e94a8d458ddea3c22d938cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 4fe5e3a3d4a1c114aae6d99904d80851, type: 3}
-  healthBar: {fileID: 2403282345339914965}
-  body: {fileID: 3297165312248498830}
 --- !u!1 &2403282345339914965
 GameObject:
   m_ObjectHideFlags: 0
