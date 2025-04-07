@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     [ReadOnly] private bool wasHit;
     public bool hasDash;
     
+    [SerializeField] private GameObject body;
+    
     // ============================= INIT =============================
     void Awake()
     {
@@ -73,8 +75,9 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         tick++;
-        float angle = Mathf.Atan2(playerEntity.lookDirectionVector.y, playerEntity.lookDirectionVector.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle - 90f);
+        // float angle = Mathf.Atan2(playerEntity.lookDirectionVector.y, playerEntity.lookDirectionVector.x) * Mathf.Rad2Deg;
+        // transform.rotation = Quaternion.Euler(0, 0, angle - 90f);
+        if(body) body.transform.rotation = Quaternion.Euler(0, playerEntity.moveDirectionVector.x >= 0 ? 180 : 0, 0);
         
         eventer.mentalSlider.value = playerEntity.stats.health/playerEntity.stats.maxHealth;
         

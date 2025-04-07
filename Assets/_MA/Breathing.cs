@@ -41,7 +41,7 @@ public class Breathing : MonoBehaviour
         startScale = breatheOut;
         targetScale = breatheIn;
 
-        if (!body) return;
+        if (!body || !adjustY) return;
         breatheInPos = body.transform.localPosition;
         breatheInPos.y += breatheIn.y / 10;
         breatheOutPos = body.transform.localPosition;
