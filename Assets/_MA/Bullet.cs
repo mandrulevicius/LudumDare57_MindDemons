@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour
     {
         initialScale = transform.localScale;
         scaleStep = initialScale * finalSizeMultiplier / (lifeTime * 50);
-        opacityStep = 1f / (lifeTime * 50);
+        opacityStep = 0.5f / (lifeTime * 50);
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
