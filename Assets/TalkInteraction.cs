@@ -25,8 +25,7 @@ public class TalkInteraction : MonoBehaviour
     private void Awake()
     {
         eventer = GameObject.FindWithTag("Events").GetComponent<InteractionEvents>();
-        playerSprite = GameObject.FindWithTag("Player").GetComponent<SpriteRenderer>().sprite;
-
+        playerSprite = GameObject.FindWithTag("Player").GetComponentInChildren<SpriteRenderer>().sprite;
     }
 
     public void resetTalk()

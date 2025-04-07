@@ -310,8 +310,8 @@ GameObject:
   - component: {fileID: 4110229621067930505}
   - component: {fileID: 8856432041254565330}
   - component: {fileID: 7955081203209651525}
-  - component: {fileID: 132318629562789294}
   - component: {fileID: 7277097918834561752}
+  - component: {fileID: 795877815817204087}
   m_Layer: 11
   m_Name: Lust
   m_TagString: Untagged
@@ -519,19 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8f096aaa7681747b3cd4e091440cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScript: {fileID: 132318629562789294}
---- !u!114 &132318629562789294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9201662480190868281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83bbd6bde9db155448d607eb22bb4708, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  targetScript: {fileID: 795877815817204087}
 --- !u!114 &7277097918834561752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,6 +535,18 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 95258ce6699b434459e1a17a298b740e, type: 3}
   healthBar: {fileID: 3839790677187308907}
   body: {fileID: 6607170709315506624}
+--- !u!114 &795877815817204087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9201662480190868281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3611cbd02c2b7324fbeecd02ad69cc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &277835470837875958
 PrefabInstance:
   m_ObjectHideFlags: 0
