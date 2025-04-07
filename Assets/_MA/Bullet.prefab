@@ -60,6 +60,7 @@ MonoBehaviour:
     rangedDamage: 0
     armor: 0
     attackSpeed: 0
+    explosionSize: 0.2
   rb: {fileID: 0}
   explosionPrefab: {fileID: 5460664913994178735, guid: db925648426faea439a2a03d2fc50d19, type: 3}
   movementTarget: {fileID: 0}

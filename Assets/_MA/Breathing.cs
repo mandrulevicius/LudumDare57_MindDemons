@@ -26,6 +26,10 @@ public class Breathing : MonoBehaviour
     public bool adjustY = false;
     
     public GameObject body;
+    
+    private Renderer objectRenderer;
+    private bool isVisible = false;
+
 
     private void Awake()
     {
@@ -52,11 +56,21 @@ public class Breathing : MonoBehaviour
         startPos = breatheOutPos;
         targetPos = breatheInPos;
     }
+    
+    private void OnBecameVisible()
+    {
+        isVisible = true;
+    }
+
+    private void OnBecameInvisible()
+    {
+        isVisible = false;
+    }
+
 
     private void FixedUpdate()
     {
-        // return;
-        if (!body) return;
+        if (!body || !isVisible) return;
         currentTime += Time.fixedDeltaTime;
         body.transform.localScale = Vector3.Lerp(startScale, targetScale, currentTime / expandDuration);
         if (adjustY && body) body.transform.localPosition = Vector3.Lerp(startPos, targetPos, currentTime / expandDuration);

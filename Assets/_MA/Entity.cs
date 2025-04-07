@@ -20,6 +20,8 @@ public struct Stats
     
     public float armor;
     public float attackSpeed;
+
+    public float explosionSize;
 }
 
 public class Entity : MonoBehaviour
@@ -87,12 +89,12 @@ public class Entity : MonoBehaviour
         
         float damage = CalcDamage(otherEntity);
         
-        Interactions.Add(
-            stats,
-            otherEntity.stats,
-            damage,
-            rb.linearVelocity
-        );
+        // Interactions.Add(
+        //     stats,
+        //     otherEntity.stats,
+        //     damage,
+        //     rb.linearVelocity
+        // );
         
         ApplyDamage(damage);
     }
@@ -134,7 +136,7 @@ public class Entity : MonoBehaviour
     void UpdateEntity()
     {
         if (stats.maxHealth <= 0 || stats.health <= 0) Die();
-        stats.velocity = rb.linearVelocity;
+        if (rb) stats.velocity = rb.linearVelocity;
     }
     
     void CalcSpeed()
@@ -162,9 +164,10 @@ public class Entity : MonoBehaviour
     {
         if (explosionPrefab)
         {
-            GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-            explosion.GetComponent<Explosion>().endSize = stats.maxHealth / 100;
-            explosion.GetComponent<Explosion>().lifetime = stats.maxHealth / 100;
+            GameObject explosion = Instantiate(explosionPrefab,
+                new Vector3(transform.position.x, transform.position.y, transform.position.z - 1), Quaternion.identity);
+            explosion.GetComponent<Explosion>().endSize = stats.explosionSize;
+            explosion.GetComponent<Explosion>().lifetime = stats.explosionSize;
         }
         Destroy(gameObject, 0.01f);
     }
