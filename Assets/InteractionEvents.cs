@@ -21,12 +21,14 @@ public class InteractionEvents : MonoBehaviour
     [SerializeField] private AudioSource genericAudioSource;
     public AudioClip genericClip;
     public float fadeDuration = 1.5f;
+    public bool bossBattleOn = false;
 
     public void onnpcChanged()
     {
         if (npc == null)
         {
             interactionTextBox.active = false;
+            if(bossBattleOn){return;}
             StartCoroutine(CrossFadeRoutine(audioSource, genericAudioSource));
         }
         else
@@ -37,15 +39,21 @@ public class InteractionEvents : MonoBehaviour
 
     public void PlayGenericClip()
     {
+        if(bossBattleOn){return;}
         StartCoroutine(CrossFadeRoutine(audioSource, genericAudioSource));
     }
 
     public void PlayNewAudio()
     {
+        if(bossBattleOn){return;}
         audioSource.clip = audioClip;
         StartCoroutine(CrossFadeRoutine(genericAudioSource, audioSource));
     }
 
+    public void changeBossBattle()
+    {
+        bossBattleOn = !bossBattleOn;
+    }
     private IEnumerator CrossFadeRoutine(AudioSource fromSource, AudioSource toSource)
     {
         float time = 0f;
