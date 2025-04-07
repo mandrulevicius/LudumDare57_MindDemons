@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -15,24 +16,20 @@ public class Boss : MonoBehaviour
         var sinsPlaces = GameObject.FindWithTag("SinPlaces");
         var player = GameObject.FindWithTag("Player");
 
-        var sins = sinsContainer.GetComponentsInChildren<Transform>(true)
-            .Where(t => t != sinsContainer.transform) // Avoid root container itself
-            .Select(t => t.gameObject)
-            .ToArray();
-
-        var places = sinsPlaces.GetComponentsInChildren<Transform>(true)
-            .Where(t => t != sinsPlaces.transform) // Avoid root container itself
-            .Select(t => t.gameObject)
-            .ToArray();
-
-        for (int i = 0; i < Mathf.Min(sins.Length, places.Length); i++)
+        var sins = new List<GameObject>();
+        for (int i = 0; i < sinsContainer.transform.childCount; i++)
         {
-            // Move the entire sin GameObject, including all its children
-            sins[i].transform
-                .SetParent(places[i].transform, worldPositionStays: false); // Keep local position to target
-            sins[i].transform.localPosition = Vector3.zero; 
+            sins.Add(sinsContainer.transform.GetChild(i).gameObject);
+        }
 
-            // Ensure relevant Entity component is updated for combat
+        var places = new List<GameObject>();
+        for (int i = 0; i < sinsPlaces.transform.childCount; i++)
+        {
+            places.Add(sinsPlaces.transform.GetChild(i).gameObject);
+        }
+        for (int i = 0; i < Mathf.Min(sins.Count, places.Count); i++)
+        {
+            sins[i].transform.position = places[i].transform.position;
             var entity = sins[i].GetComponent<Entity>();
             if (entity != null)
             {

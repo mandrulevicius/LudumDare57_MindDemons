@@ -35,6 +35,7 @@ public class TalkInteraction : MonoBehaviour
     }
     public void Interact(bool agree, Sprite sinSprite)
     {
+        Debug.Log(talkCount);
         if (talkCount % 2 == 0)
         {
             eventer.changePicture(sinSprite);
