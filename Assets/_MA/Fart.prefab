@@ -70,7 +70,7 @@ MonoBehaviour:
   lookDirectionVector: {x: 0, y: 0}
   isSprinting: 0
   isDashing: 0
-  inCombat: 0
+  inCombat: 1
   isShooting: 0
 --- !u!114 &3847470487706182008
 MonoBehaviour:

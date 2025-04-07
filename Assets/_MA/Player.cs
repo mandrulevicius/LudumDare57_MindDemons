@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
             other.gameObject.layer != LayerMask.NameToLayer("Sin")) return;
         Entity otherEntity = other.gameObject.GetComponent<Entity>();
         if (!otherEntity) otherEntity = other.gameObject.GetComponentInParent<Entity>();
-        
+        if (!otherEntity.inCombat) return;
         
         playerEntity.ApplyDamage(otherEntity.stats.touchDamage);
     }
@@ -45,6 +45,8 @@ public class Player : MonoBehaviour
         tick++;
         Entity otherEntity = other.gameObject.GetComponent<Entity>();
         if (!otherEntity) otherEntity = other.gameObject.GetComponentInParent<Entity>();
+        if (!otherEntity.inCombat) return;
+        
         playerEntity.ApplyDamage(otherEntity.stats.touchDamage);
     }
     
@@ -56,6 +58,8 @@ public class Player : MonoBehaviour
         wasHit = true;
         tick++;
         Entity otherEntity = other.gameObject.GetComponent<Entity>();
+        if (!otherEntity.inCombat) return;
+        
         playerEntity.ApplyDamage(otherEntity.stats.touchDamage);
     }
     
@@ -67,6 +71,8 @@ public class Player : MonoBehaviour
         wasHit = true;
         tick++;
         Entity otherEntity = other.gameObject.GetComponent<Entity>();
+        if (!otherEntity.inCombat) return;
+        
         playerEntity.ApplyDamage(otherEntity.stats.touchDamage);
     }
     

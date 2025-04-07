@@ -87,6 +87,8 @@ public class Entity : MonoBehaviour
         // only bullets damage entities
         if (!otherEntity.CompareTag("Bullet")) return;
         
+        
+        
         float damage = CalcDamage(otherEntity);
         
         // Interactions.Add(
