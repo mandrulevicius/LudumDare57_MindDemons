@@ -9,6 +9,8 @@ public class ShopInteractions : MonoBehaviour
     [SerializeField] private GameObject sellingItem;
     private List<DialogueLine> topic;
     private List<DialogueLine> topicYes;
+    private List<DialogueLine> topicNothing;
+    private TalkInteraction talkInteraction;
     private int dailogCounter = 0;
 
     private void Awake()
@@ -17,8 +19,8 @@ public class ShopInteractions : MonoBehaviour
         {
             new DialogueLine(
                 "<b><color=#08ffe0>Spiritual guide:</color></b>",
-                $"<Stops chanting>\nHello traveller would you like buy {(sellingItem != null ? sellingItem.gameObject.name : "Missing element ;D")}?" +
-                "It will const you 10 Insights <i>no(q) yes (e)</i>"
+                $"<Stops chanting>\nHello traveller would you {(sellingItem != null ? sellingItem.gameObject.name : "Missing element ;D")}?" +
+                "<i>no(q) yes (e)</i>"
             ),
             new DialogueLine(
                 "<b><color=#4aa3df>You:</color></b>",
@@ -29,52 +31,83 @@ public class ShopInteractions : MonoBehaviour
                 "<Starts ignoring you and continues chanting>"
             )
         };
+        topicNothing = new List<DialogueLine>
+        {
+            new DialogueLine(
+                "<b><color=#08ffe0>Spiritual guide:</color></b>",
+                $"I have nothing to give you."
+                ),
+            new DialogueLine(
+                "<b><color=#4aa3df>You:</color></b>",
+                "Shit."
+            )
+        };
         topicYes = new List<DialogueLine>
         {
             new DialogueLine(
                 "<b><color=#08ffe0>Spiritual guide:</color></b>",
-                $"<Stops chanting>\nHello traveller would you like buy {(sellingItem != null ? sellingItem.gameObject.name : "Missing element ;D")}?" +
-                "It will const you 10 Insights <i>no(q) yes (e)</i>"
+                $"<Stops chanting>\nHello traveller would you like {(sellingItem != null ? sellingItem.gameObject.name : "Missing element ;D")}?" +
+                "<i>no(q) yes (e)</i>"
                 ),
             new DialogueLine(
                 "<b><color=#4aa3df>You:</color></b>",
-                "*Sigh* Well maybe just a little?"
-            ),
-            new DialogueLine(
-                "<b><color=#08ffe0>Spiritual guide:</color></b>",
-                "Have this pill.\n<Continues scribbling in his book> "
-            ),
-            new DialogueLine(
-                "<b><color=#4aa3df>You:</color></b>",
-                "<You eat a pill and feel better>"
+                "Yes!"
             )
         };
 
 
         eventer = GameObject.FindWithTag("Events").GetComponent<InteractionEvents>();
         player = GameObject.FindWithTag("Player").GetComponent<Entity>();
+        talkInteraction = gameObject.GetComponent<TalkInteraction>();
     }
 
     public void Talk(bool agreed)
     {
+        if (!sellingItem && topicNothing.Count== dailogCounter)
+        {
+            eventer.StopTalk(agreed);
+        }
         if ((agreed ? topicYes.Count : topic.Count) == dailogCounter)
         {
             eventer.StopTalk(agreed);
+
+            if (agreed)
+            {
+                if (sellingItem.gameObject.name == "Learn to Chant")
+                {
+                    player.stats.attackSpeed = 1;
+                    
+                    Destroy(sellingItem);
+                }
+
+                if (sellingItem.gameObject.name == "Safety Blanket")
+                {
+                    player.stats.armor = 1;
+                    Destroy(sellingItem);
+                }
+                talkInteraction.resetTalk();
+            }
+            
+            
             dailogCounter = 0;
             return;
         }
 
         eventer.StartTalk();
-        if (agreed)
+        if(!sellingItem)
+        {
+            eventer.WriteText($"{topicNothing[dailogCounter].speaker} \n{topicNothing[dailogCounter].line}");
+
+        }
+        else if (agreed)
         {
             eventer.WriteText($"{topicYes[dailogCounter].speaker} \n{topicYes[dailogCounter].line}");
-            player.stats.health = player.stats.maxHealth;
         }
         else
         {
             eventer.WriteText($"{topic[dailogCounter].speaker} \n{topic[dailogCounter].line}");
         }
-
+        talkInteraction.resetTalk();
         dailogCounter++;
     }
 }
