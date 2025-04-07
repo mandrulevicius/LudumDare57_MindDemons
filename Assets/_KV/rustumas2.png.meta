@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9c031684c76ce3e40907ad56900f6123
+guid: a4e8ca17df09bb3438c55c3354e81ed7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4836001474913870733
-    second: puikybe_0
+      213: 6115442635453646671
+    second: rustumas2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: puikybe_0
+      name: rustumas2_0
       rect:
         serializedVersion: 2
-        x: 163
-        y: 163
-        width: 819
-        height: 2764
+        x: 78
+        y: 103
+        width: 785
+        height: 1740
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 37c5e72e74213ecb0800000000000000
-      internalID: -4836001474913870733
+      spriteID: f474e7a0daa6ed450800000000000000
+      internalID: 6115442635453646671
       vertices: []
       indices: 
       edges: []

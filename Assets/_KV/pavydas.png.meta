@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9c031684c76ce3e40907ad56900f6123
+guid: fd51801a71c70ba40aec6c5bd7558fcd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4836001474913870733
-    second: puikybe_0
+      213: 3359772366207413623
+    second: pavydas_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: puikybe_0
+      name: pavydas_0
       rect:
         serializedVersion: 2
-        x: 163
-        y: 163
-        width: 819
-        height: 2764
+        x: 43
+        y: 460
+        width: 823
+        height: 1399
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 37c5e72e74213ecb0800000000000000
-      internalID: -4836001474913870733
+      spriteID: 77d67fd8a2f40ae20800000000000000
+      internalID: 3359772366207413623
       vertices: []
       indices: 
       edges: []

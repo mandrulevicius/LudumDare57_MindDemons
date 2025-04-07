@@ -865,6 +865,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.88
       objectReference: {fileID: 0}
+    - target: {fileID: 1330134685612322333, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1757659815997003704, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
       propertyPath: breathRate
       value: 1
@@ -899,15 +903,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2337970157944698540, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2337970157944698540, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2337970157944698540, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2337970157944698540, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -922,9 +926,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2475599195217419465, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
+      propertyPath: body
+      value: 
+      objectReference: {fileID: 2026660998}
+    - target: {fileID: 2475599195217419465, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
       propertyPath: audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 4fe5e3a3d4a1c114aae6d99904d80851, type: 3}
+    - target: {fileID: 2475599195217419465, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1252590592}
     - target: {fileID: 2875450361217445625, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
       propertyPath: Loop
       value: 0
@@ -4651,6 +4663,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4381886712384844945, guid: 9733876c12f0c3641bdf2faf1ba954ca, type: 3}
   m_PrefabInstance: {fileID: 936071175}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &999986817 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1308550103268338880, guid: a5e409b5cf94b0e4e9bbd83a785d2b66, type: 3}
+  m_PrefabInstance: {fileID: 5133877165317448683}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1003946036 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8862399922168041192, guid: 32d430a4ef5bc684a8624a903cba3489, type: 3}
@@ -5516,6 +5533,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c176c87d40336344ba81734b31de19c6, type: 3}
+--- !u!1 &1252590592 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2403282345339914965, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
+  m_PrefabInstance: {fileID: 147247806}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1272326457 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2465068312141941054, guid: e63201587eb21fb4cbb15c85ff3a7440, type: 3}
@@ -8180,6 +8202,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9733876c12f0c3641bdf2faf1ba954ca, type: 3}
+--- !u!1 &2026660998 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3297165312248498830, guid: c2e4561e9eec428439fc245fbc9cd37c, type: 3}
+  m_PrefabInstance: {fileID: 147247806}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2040502918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10304,6 +10331,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7277097918834561752, guid: a5e409b5cf94b0e4e9bbd83a785d2b66, type: 3}
+      propertyPath: body
+      value: 
+      objectReference: {fileID: 999986817}
     - target: {fileID: 7277097918834561752, guid: a5e409b5cf94b0e4e9bbd83a785d2b66, type: 3}
       propertyPath: healthBar
       value: 
