@@ -46,7 +46,7 @@ public class Entity : MonoBehaviour
     float _speedPerTick;
 
     public bool inCombat;
-    [ReadOnly] public bool isShooting;
+    public bool isShooting;
     
     
     // ============================= INIT =============================
@@ -158,9 +158,9 @@ public class Entity : MonoBehaviour
         if (explosionPrefab)
         {
             GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-            explosion.GetComponent<Explosion>().endSize = transform.localScale.x * 5;
-            explosion.GetComponent<Explosion>().lifetime = transform.localScale.x;
+            explosion.GetComponent<Explosion>().endSize = transform.localScale.x * 1.5f;
+            explosion.GetComponent<Explosion>().lifetime = stats.maxHealth / 100;
         }
-        Destroy(gameObject, 0f);
+        Destroy(gameObject, 0.01f);
     }
 }
