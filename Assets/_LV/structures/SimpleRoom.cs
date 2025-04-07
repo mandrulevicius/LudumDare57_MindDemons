@@ -13,6 +13,7 @@ public class SimpleRoom : MonoBehaviour
         GameObject[] enemiesInTrigger = FindOthersInTrigger("Enemy");
         GameObject[] sinsInTrigger = FindOthersInTrigger("Sin");
         GameObject[] npcInTrigger = FindOthersInTrigger("Npc");
+        GameObject[] boss = FindOthersInTrigger("Boss");
         
         var once = 0;
         foreach (GameObject enemy in enemiesInTrigger)
@@ -38,6 +39,11 @@ public class SimpleRoom : MonoBehaviour
 
         }
         foreach (GameObject npc in npcInTrigger)
+        {
+            eventer.npc = npc;
+            eventer.onnpcChanged();
+        }
+        foreach (GameObject npc in boss)
         {
             eventer.npc = npc;
             eventer.onnpcChanged();
