@@ -32,7 +32,7 @@ public class GluttonyInteractions : MonoBehaviour
         ),
         new DialogueLine(
             "<b><color=#7c61d6>Gluttony:</color></b>",
-            "Nope, but have a piece of cake.\n<He continues eating> "
+            "Nope, but have a piece of cake. We will see each other later\n<He continues eating>"
         ),
         new DialogueLine(
             "<b><color=#4aa3df>You:</color></b>",
