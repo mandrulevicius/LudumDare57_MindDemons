@@ -16,6 +16,12 @@ public class Boss : MonoBehaviour
         eventer = GameObject.FindWithTag("Events").GetComponent<InteractionEvents>();
     }
 
+    private void OnDestroy()
+    {
+        eventer.changeBossBattle();
+        eventer.PlayGenericClip();
+    }
+
     public void StartBattle()
     {
         var sinsContainer = GameObject.FindWithTag("SinsContainer");
@@ -23,7 +29,7 @@ public class Boss : MonoBehaviour
         var player = GameObject.FindWithTag("Player");
         eventer.audioClip = bossBattleSound;
         eventer.PlayNewAudio();
-
+        eventer.changeBossBattle();    
         var sins = new List<GameObject>();
         for (int i = 0; i < sinsContainer.transform.childCount; i++)
         {
